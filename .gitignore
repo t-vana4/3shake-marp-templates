@@ -32,4 +32,7 @@ yarn-error.log
 
 # Cache files
 .cache/
-.marp-cache/ 
+.marp-cache/
+
+# Slides directories (uncomment if needed)
+# slides/

@@ -1,0 +1,80 @@
+/**
+ * Marp日本語プレゼンテーション作成ルール
+ * 
+ * このルールファイルは日本語でMarpスライドを作成する際の
+ * ベストプラクティスをまとめたものです
+ */
+
+// スライド全般のルール
+rules {
+  // 1枚のスライドには1つのメッセージだけを含める
+  // 複数のポイントを詰め込みすぎないこと
+  one_message_per_slide: true;
+  
+  // 文字数の見積もりを控えめにする
+  // 日本語は英語より表示に多くのスペースを取る
+  conservative_character_count: true;
+  
+  // フォントサイズを十分に大きくする（最小28pt推奨）
+  minimum_font_size: 28;
+  
+  // 箇条書きは最大5項目までに制限
+  max_bullet_points: 5;
+  
+  // 重要ポイントは2〜3つに絞る
+  focus_points: 3;
+}
+
+// 日本語特有のルール
+japanese_specific {
+  // 日本語フォントでの1行あたりの最大文字数（全角）
+  max_chars_per_line: 30;
+  
+  // 箇条書き1項目あたりの最大文字数
+  max_chars_per_bullet: 40;
+  
+  // スライドタイトルの最大文字数
+  max_chars_per_title: 25;
+  
+  // 和英混在テキストの場合、和文と英文の間にスペースを入れる
+  space_between_japanese_and_english: true;
+}
+
+// 視覚的要素
+visual {
+  // コントラスト比を高く保つ
+  high_contrast: true;
+  
+  // 画像とテキストのバランス（画像は画面の60%まで）
+  image_text_balance: "40-60";
+  
+  // 図表には必ず簡潔な説明を付ける
+  annotate_diagrams: true;
+}
+
+// プレゼンテーションの構造
+structure {
+  // 冒頭に目次スライドを入れる
+  include_agenda: true;
+  
+  // 各セクションの冒頭でそのセクションの目的を明示
+  state_section_purpose: true;
+  
+  // 結論を先に述べる（PREP法）
+  conclusion_first: true;
+  
+  // 20分プレゼンテーションの理想的なスライド数は15〜20枚
+  slides_per_minute: 0.75;
+}
+
+// その他のMarpでの日本語表示最適化
+marp_japanese_optimization {
+  // 日本語フォントを明示的に指定
+  specify_japanese_fonts: true;
+  
+  // 縦書きレイアウトを使用する場合の特別設定
+  vertical_text_support: false;
+  
+  // 英数字を自動的に半角に統一
+  normalize_alphanumeric: true;
+} 
