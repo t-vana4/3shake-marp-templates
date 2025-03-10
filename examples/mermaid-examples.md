@@ -16,29 +16,58 @@ style: |
     background: transparent !important;
   }
   .mermaid svg {
-    max-width: 100% !important;
     height: auto !important;
+    max-width: 100% !important;
+  }
+  /* 自動サイズ調整用のクラス */
+  .mermaid-auto-xxxs {
+    max-width: 10% !important;
+  }
+  .mermaid-auto-xxs {
+    max-width: 15% !important;
+  }
+  .mermaid-auto-xs svg {
+    max-width: 20% !important;
+  }
+  .mermaid-auto-sm svg {
+    max-width: 35% !important;
+  }
+  .mermaid-auto-md svg {
+    max-width: 50% !important;
+  }
+  .mermaid-auto-lg svg {
+    max-width: 65% !important;
+  }
+  .mermaid-auto-xl svg {
+    max-width: 80% !important;
+  }
+  /* レスポンシブ対応 */
+  @media (max-width: 1280px) {
+    .mermaid-auto-xxxs svg {
+      max-width: 10% !important;
+    }
+    .mermaid-auto-xxs svg {
+      max-width: 15% !important;
+    }
+    .mermaid-auto-xs svg {
+      max-width: 20% !important;
+    }
+    .mermaid-auto-sm svg {
+      max-width: 35% !important;
+    }
+    .mermaid-auto-md svg {
+      max-width: 50% !important;
+    }
+    .mermaid-auto-lg svg, .mermaid-auto-xl svg {
+      max-width: 85% !important;
+    }
   }
 ---
 
 # Mermaidダイアグラムの例
 
 ## 基本的なフローチャート
-
-<div class="mermaid">
-flowchart TD
-    A([開始]) --> B{条件分岐}
-    B -->|Yes| C[処理1]
-    B -->|No| D[処理2]
-    C --> E([終了])
-    D --> E
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style E fill:#f9f,stroke:#333,stroke-width:2px
-</div>
-
-また、コードブロックでの記述も試してみます:
-
-<pre class="mermaid">
+<pre class="mermaid mermaid-auto-xs">
 flowchart TD
     A([開始]) --> B{条件分岐}
     B -->|Yes| C[処理1]
@@ -53,7 +82,7 @@ flowchart TD
 
 # シーケンス図の例
 
-<pre class="mermaid">
+<pre class="mermaid mermaid-auto-sm">
 sequenceDiagram
     participant User as ユーザー
     participant Front as フロントエンド
@@ -94,7 +123,7 @@ gantt
 
 # クラス図の例
 
-<pre class="mermaid">
+<pre class="mermaid mermaid-auto-xxs">
 classDiagram
     class User {
         +String name
@@ -114,7 +143,7 @@ classDiagram
 
 # ERD（Entity Relationship Diagram）の例
 
-<pre class="mermaid">
+<pre class="mermaid mermaid-auto-xxs">
 erDiagram
     CUSTOMER ||--o{ ORDER : places
     ORDER ||--|{ ORDER_ITEM : contains
@@ -143,9 +172,78 @@ flowchart TD
 
 <script type="module">
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
+
+// 初期化
 mermaid.initialize({ 
   startOnLoad: true,
   theme: 'default',
   fontSize: 16
+});
+
+// ダイアグラムのサイズを自動調整する関数
+function autoSizeMermaidDiagrams() {
+  // すべてのMermaidダイアグラムを取得
+  const diagrams = document.querySelectorAll('.mermaid');
+  
+  diagrams.forEach(diagram => {
+    // SVG要素が生成されるまで待機
+    const observer = new MutationObserver((mutations, obs) => {
+      const svg = diagram.querySelector('svg');
+      if (svg) {
+        // 監視を停止
+        obs.disconnect();
+        
+        // ダイアグラムの種類を判定
+        let diagramType = '';
+        let sizeClass = '';
+        
+        // ダイアグラムのテキストコンテンツを取得
+        const content = diagram.textContent.toLowerCase();
+        
+        // ダイアグラムの種類と複雑さに基づいてサイズクラスを決定
+        if (content.includes('flowchart') || content.includes('graph')) {
+          // ノード数に基づいてサイズを決定
+          const nodeCount = (content.match(/\[|\]|\(|\)|\{|\}/g) || []).length;
+          if (nodeCount < 10) {
+            sizeClass = 'mermaid-auto-xs';
+          } else if (nodeCount < 20) {
+            sizeClass = 'mermaid-auto-sm';
+          } else {
+            sizeClass = 'mermaid-auto-md';
+          }
+        } else if (content.includes('sequencediagram')) {
+          // 参加者の数に基づいてサイズを決定
+          const participantCount = (content.match(/participant/g) || []).length;
+          sizeClass = participantCount <= 3 ? 'mermaid-auto-md' : 'mermaid-auto-lg';
+        } else if (content.includes('gantt')) {
+          // セクション数に基づいてサイズを決定
+          const sectionCount = (content.match(/section/g) || []).length;
+          sizeClass = sectionCount <= 2 ? 'mermaid-auto-lg' : 'mermaid-auto-xl';
+        } else if (content.includes('classDiagram')) {
+          // クラス数に基づいてサイズを決定
+          const classCount = (content.match(/class /g) || []).length;
+          sizeClass = classCount <= 2 ? 'mermaid-auto-sm' : 'mermaid-auto-md';
+        } else if (content.includes('erdiagram')) {
+          // エンティティ数に基づいてサイズを決定
+          sizeClass = 'mermaid-auto-sm';
+        } else {
+          // その他のダイアグラム
+          sizeClass = 'mermaid-auto-md';
+        }
+        
+        // サイズクラスを適用
+        diagram.classList.add(sizeClass);
+      }
+    });
+    
+    // DOM変更の監視を開始
+    observer.observe(diagram, { childList: true, subtree: true });
+  });
+}
+
+// ページ読み込み完了後に実行
+window.addEventListener('load', () => {
+  // 少し遅延させて実行（Mermaidのレンダリング完了を待つ）
+  setTimeout(autoSizeMermaidDiagrams, 500);
 });
 </script>
