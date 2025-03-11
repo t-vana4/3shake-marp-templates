@@ -2,6 +2,9 @@
 marp: true
 theme: ../themes/3shake-theme.css
 paginate: true
+html: true
+mermaid: true
+math: katex
 style: |
   :root {
     --logo-url: url("../assets/images/3shake-cover.png");
@@ -91,6 +94,63 @@ style: |
     margin: 0;
     box-sizing: border-box;
   }
+  /* Mermaid図のスタイル */
+  .mermaid {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 2em auto !important;
+    background: transparent !important;
+  }
+  .mermaid svg {
+    height: auto !important;
+    max-width: 100% !important;
+  }
+  /* 自動サイズ調整用のクラス */
+  .mermaid-auto-xxxs {
+    max-width: 10% !important;
+  }
+  .mermaid-auto-xxs {
+    max-width: 15% !important;
+  }
+  .mermaid-auto-xs svg {
+    max-width: 20% !important;
+  }
+  .mermaid-auto-s svg {
+    max-width: 25% !important;
+  }
+  .mermaid-auto-sm svg {
+    max-width: 35% !important;
+  }
+  .mermaid-auto-md svg {
+    max-width: 50% !important;
+  }
+  .mermaid-auto-lg svg {
+    max-width: 65% !important;
+  }
+  .mermaid-auto-xl svg {
+    max-width: 80% !important;
+  }
+  /* レスポンシブ対応 */
+  @media (max-width: 1280px) {
+    .mermaid-auto-xxxs svg {
+      max-width: 10% !important;
+    }
+    .mermaid-auto-xxs svg {
+      max-width: 15% !important;
+    }
+    .mermaid-auto-xs svg {
+      max-width: 20% !important;
+    }
+    .mermaid-auto-sm svg {
+      max-width: 35% !important;
+    }
+    .mermaid-auto-md svg {
+      max-width: 50% !important;
+    }
+    .mermaid-auto-lg svg, .mermaid-auto-xl svg {
+      max-width: 85% !important;
+    }
+  }
 ---
 
 <!-- 
@@ -176,6 +236,42 @@ _class: title dark
 * ✅ 信頼性設計とSLO管理の導入
 * ✅ インフラのコード化と自動化
 * ✅ 高度な可観測性基盤の構築
+
+---
+
+<!-- _backgroundColor: white -->
+
+## <span class="highlight-blue">SREの主要概念</span>
+
+### Site Reliability Engineeringの全体像
+
+<pre class="mermaid mermaid-auto-lg">
+flowchart TD
+    A((SRE)) --> B[信頼性]
+    A --> C[自動化]
+    A --> D[測定]
+    A --> E[文化]
+    
+    B --> B1(SLO/SLI)
+    B --> B2(エラーバジェット)
+    B --> B3(リスク管理)
+    
+    C --> C1(トイル削減)
+    C --> C2(障害対応自動化)
+    C --> C3(継続的デリバリー)
+    
+    D --> D1(モニタリング)
+    D --> D2(可観測性)
+    D --> D3(アラート)
+    
+    E --> E1(ポストモーテム)
+    E --> E2(心理的安全性)
+    E --> E3(DevOps協働)
+</pre>
+
+<div class="info-box">
+SREは信頼性、自動化、測定、文化という4つの柱から成り、これらが相互に連携してサービスの安定性と俊敏性を実現します。
+</div>
 
 ---
 
@@ -300,6 +396,35 @@ SLIとSLOは感覚的な信頼性議論を客観的かつ数値的な議論に�
 
 <!-- _backgroundColor: white -->
 
+## <span class="highlight-green">SREライフサイクル</span>
+
+
+<pre class="mermaid mermaid-auto-xs">
+flowchart TD
+    A([サービス設計]) --> B[SLIの特定]
+    B --> C[SLOの設定]
+    C --> D{モニタリング}
+    D -->|SLO違反| E[インシデント対応]
+    D -->|バジェット消費| F[プロアクティブ対応]
+    E --> G[ポストモーテム]
+    F --> G
+    G --> H[自動化の実装]
+    H --> I[トイル削減]
+    I --> J[サービス改善]
+    J --> B
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+    style J fill:#bfb,stroke:#333,stroke-width:2px
+</pre>
+
+<div class="info-box">
+SREのライフサイクルは単なる障害対応ではなく、継続的なサービス改善のフィードバックループを形成します。
+</div>
+
+---
+
+<!-- _backgroundColor: white -->
+
 ## <span class="highlight-green">提案内容: 信頼性基盤</span>
 
 ### インフラストラクチャ & 運用自動化
@@ -323,6 +448,41 @@ SLIとSLOは感覚的な信頼性議論を客観的かつ数値的な議論に�
 
 <div class="info-box">
 クラウドネイティブ技術を活用し、柔軟かつ堅牢なプラットフォーム基盤を構築します。
+</div>
+
+---
+
+<!-- _backgroundColor: white -->
+
+## <span class="highlight-green">SREプラットフォーム構成</span>
+
+### コンポーネント間の関係
+
+<pre class="mermaid mermaid-auto-xs">
+erDiagram
+    SERVICE ||--o{ METRICS : produces
+    SERVICE ||--o{ LOGS : generates
+    SERVICE ||--o{ TRACES : creates
+    
+    METRICS }|--|| PROMETHEUS : collects
+    LOGS }|--|| LOKI : aggregates
+    TRACES }|--|| JAEGER : stores
+    
+    PROMETHEUS ||--o{ ALERT : triggers
+    LOKI ||--o{ ALERT : triggers
+    JAEGER ||--o{ ANALYSIS : enables
+    
+    ALERT }|--|| PAGERDUTY : notifies
+    ALERT ||--o{ RUNBOOK : references
+    
+    PAGERDUTY ||--o{ ONCALL : dispatches
+    RUNBOOK ||--o{ AUTOMATION : implements
+    
+    AUTOMATION ||--o{ SERVICE : improves
+</pre>
+
+<div class="info-box">
+SREプラットフォームは相互に連携するコンポーネントで構成され、サービスのモニタリングから改善までの一貫したフローを実現します。
 </div>
 
 ---
@@ -461,6 +621,46 @@ SLIとSLOは感覚的な信頼性議論を客観的かつ数値的な議論に�
 
 <div class="info-box">
 自動化とSREプラクティスの導入により、運用負荷を軽減し、エンジニアが価値創造に集中できる環境を構築します。
+</div>
+
+---
+
+<!-- _backgroundColor: white -->
+
+## <span class="highlight-yellow">インシデント管理フロー</span>
+
+<pre class="mermaid mermaid-auto-xs">
+sequenceDiagram
+    participant M as モニタリング
+    participant SRE as SREチーム
+    participant Dev as 開発チーム
+    participant Ops as 運用チーム
+    participant Mgmt as マネジメント
+
+    M->>SRE: アラート検知
+    Note over SRE: インシデント宣言
+    SRE->>SRE: 重要度評価
+    alt 重大インシデント
+        SRE->>Dev: 開発者招集
+        SRE->>Ops: 運用担当招集
+        SRE->>Mgmt: 経営層通知
+    else 軽微インシデント
+        SRE->>Dev: 担当者アサイン
+    end
+    SRE->>SRE: 対応責任者設定
+    Note over SRE,Dev: 原因調査
+    Dev->>SRE: 修正案提案
+    SRE->>Dev: レビュー・確認
+    Dev->>Ops: 修正デプロイ
+    Ops->>SRE: 復旧確認
+    SRE->>Mgmt: 状況報告
+    Note over SRE: インシデントクローズ
+    SRE->>SRE: ポストモーテム作成
+    SRE->>Dev: 恒久対策実施
+</pre>
+
+<div class="info-box">
+明確に定義されたインシデント管理フローにより、迅速かつ効率的な障害対応と学習サイクルを実現します。
 </div>
 
 ---
@@ -775,3 +975,81 @@ _class: title dark
 
 @nwiizo | https://syu-m-5151.hatenablog.com/
 </div>
+
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
+
+// 初期化
+mermaid.initialize({ 
+  startOnLoad: true,
+  theme: 'default',
+  fontSize: 16
+});
+
+// ダイアグラムのサイズを自動調整する関数
+function autoSizeMermaidDiagrams() {
+  // すべてのMermaidダイアグラムを取得
+  const diagrams = document.querySelectorAll('.mermaid');
+  
+  diagrams.forEach(diagram => {
+    // SVG要素が生成されるまで待機
+    const observer = new MutationObserver((mutations, obs) => {
+      const svg = diagram.querySelector('svg');
+      if (svg) {
+        // 監視を停止
+        obs.disconnect();
+        
+        // ダイアグラムの種類を判定
+        let diagramType = '';
+        let sizeClass = '';
+        
+        // ダイアグラムのテキストコンテンツを取得
+        const content = diagram.textContent.toLowerCase();
+        
+        // ダイアグラムの種類と複雑さに基づいてサイズクラスを決定
+        if (content.includes('flowchart') || content.includes('graph')) {
+          // ノード数に基づいてサイズを決定
+          const nodeCount = (content.match(/\[|\]|\(|\)|\{|\}/g) || []).length;
+          if (nodeCount < 10) {
+            sizeClass = 'mermaid-auto-xs';
+          } else if (nodeCount < 20) {
+            sizeClass = 'mermaid-auto-sm';
+          } else {
+            sizeClass = 'mermaid-auto-md';
+          }
+        } else if (content.includes('sequencediagram')) {
+          // 参加者の数に基づいてサイズを決定
+          const participantCount = (content.match(/participant/g) || []).length;
+          sizeClass = participantCount <= 3 ? 'mermaid-auto-md' : 'mermaid-auto-lg';
+        } else if (content.includes('gantt')) {
+          // セクション数に基づいてサイズを決定
+          const sectionCount = (content.match(/section/g) || []).length;
+          sizeClass = sectionCount <= 2 ? 'mermaid-auto-lg' : 'mermaid-auto-xl';
+        } else if (content.includes('classdiagram')) {
+          // クラス数に基づいてサイズを決定
+          const classCount = (content.match(/class /g) || []).length;
+          sizeClass = classCount <= 2 ? 'mermaid-auto-sm' : 'mermaid-auto-md';
+        } else if (content.includes('erdiagram')) {
+          // エンティティ数に基づいてサイズを決定
+          sizeClass = 'mermaid-auto-sm';
+        } else {
+          // その他のダイアグラム
+          sizeClass = 'mermaid-auto-md';
+        }
+        
+        // サイズクラスを適用
+        diagram.classList.add(sizeClass);
+      }
+    });
+    
+    // DOM変更の監視を開始
+    observer.observe(diagram, { childList: true, subtree: true });
+  });
+}
+
+// ページ読み込み完了後に実行
+window.addEventListener('load', () => {
+  // 少し遅延させて実行（Mermaidのレンダリング完了を待つ）
+  setTimeout(autoSizeMermaidDiagrams, 500);
+});
+</script>
