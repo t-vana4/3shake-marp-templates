@@ -11,6 +11,10 @@ style: |
     --mini-font-size: 20px;
     --header-footer-height: 50px;
     --black: #333;
+    --section-spacing: 1.5em;
+    --highlight-border-radius: 4px;
+    --info-box-border: 1px solid rgba(0, 0, 0, 0.1);
+    --info-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   }
   /* 通常ページの左下にロゴを表示（より左下に押し込む） */
   section:not(.title)::before {
@@ -38,49 +42,57 @@ style: |
   /* タイトルスライドのロゴスタイル */
   .title-logo {
     position: fixed;
-    top: 5px;
-    left: 5px;
+    top: 20px !important;
+    left: 20px !important;
     width: 240px !important;
     height: auto;
     z-index: 9999;
+    padding: 15px !important;
+    margin: 0 !important;
   }
   /* すべての画像サイズを上書き - 3shake-logo.pngのみに適用 */
   img[src*="3shake-logo.png"] {
     max-width: 240px !important;
     width: 240px !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   /* タイトルとサブタイトルのサイズ調整 */
   .title h1 {
     font-size: 3.2em !important;
-    margin-bottom: 0.1em !important;
+    margin-bottom: 0.2em !important;
+    text-align: left !important;
   }
   .title h3 {
     font-size: 1.5em !important;
-    margin-top: 0.1em !important;
+    margin-top: 0.2em !important;
+    text-align: left !important;
   }
   /* 作者情報のスタイル */
   .author-info {
     position: absolute !important;
-    bottom: 40px !important;
+    bottom: 50px !important;
     left: 50px !important;
     padding-left: 0 !important;
     text-indent: 0 !important;
     font-size: 1.2em !important;
     color: white !important;
     font-weight: bold !important;
+    text-align: left !important;
   }
   /* スライドタイトル（h2）のスタイル */
   section h2 {
     font-size: 1.8em !important;
     margin-top: -25px !important;
     padding-top: 0 !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 15px !important;
     color: black !important;
     border-bottom: 1px solid #dadce0 !important;
   }
   /* コンテンツエリアの上部マージンを調整 */
   section > *:not(h2):not(header):not(footer) {
-    margin-top: 1.2em !important;
+    margin-top: var(--section-spacing) !important;
   }
   /* 引用（参考文献）のスタイル */
   blockquote {
@@ -113,42 +125,125 @@ style: |
     max-width: 15% !important;
   }
   .mermaid-auto-xs svg {
-    max-width: 20% !important;
-  }
-  .mermaid-auto-s svg {
     max-width: 25% !important;
   }
+  .mermaid-auto-s svg {
+    max-width: 30% !important;
+  }
   .mermaid-auto-sm svg {
-    max-width: 35% !important;
+    max-width: 40% !important;
   }
   .mermaid-auto-md svg {
-    max-width: 50% !important;
+    max-width: 55% !important;
   }
   .mermaid-auto-lg svg {
-    max-width: 65% !important;
+    max-width: 70% !important;
   }
   .mermaid-auto-xl svg {
-    max-width: 80% !important;
+    max-width: 85% !important;
+  }
+  /* 情報ボックスのスタイル改善 */
+  .info-box {
+    background-color: rgba(240, 240, 240, 0.6) !important;
+    border: var(--info-box-border) !important;
+    border-radius: 5px !important;
+    padding: 12px 15px !important;
+    margin: 1.5em 0 !important;
+    box-shadow: var(--info-box-shadow) !important;
+  }
+  /* ハイライトスタイルの改善 */
+  .highlight-blue {
+    background-color: rgba(74, 173, 221, 0.15) !important;
+    padding: 2px 5px !important;
+    border-radius: var(--highlight-border-radius) !important;
+  }
+  .highlight-green {
+    background-color: rgba(95, 184, 120, 0.15) !important;
+    padding: 2px 5px !important;
+    border-radius: var(--highlight-border-radius) !important;
+  }
+  .highlight-yellow {
+    background-color: rgba(236, 190, 48, 0.15) !important;
+    padding: 2px 5px !important;
+    border-radius: var(--highlight-border-radius) !important;
+  }
+  /* テーブルスタイルの改善 */
+  table {
+    margin: 1.5em 0 !important;
+    border-collapse: collapse !important;
+    width: 100% !important;
+  }
+  th, td {
+    padding: 8px 12px !important;
+    border: 1px solid #ddd !important;
+  }
+  th {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+  }
+  /* リストアイテム間のスペーシング改善 */
+  ul li, ol li {
+    margin-bottom: 0.5em !important;
+  }
+  ul li:last-child, ol li:last-child {
+    margin-bottom: 0 !important;
+  }
+  /* 最終スライドのスタイル改善 */
+  .thank-you-slide {
+    text-align: center !important;
+    margin-top: 200px !important;
+  }
+  .thank-you-slide h1 {
+    font-size: 3.2em !important;
+    margin-bottom: 0.5em !important;
+  }
+  .thank-you-slide h3 {
+    font-size: 1.5em !important;
+    margin-top: 1em !important;
+    margin-bottom: 1.5em !important;
   }
   /* レスポンシブ対応 */
   @media (max-width: 1280px) {
     .mermaid-auto-xxxs svg {
-      max-width: 10% !important;
-    }
-    .mermaid-auto-xxs svg {
       max-width: 15% !important;
     }
-    .mermaid-auto-xs svg {
+    .mermaid-auto-xxs svg {
       max-width: 20% !important;
     }
+    .mermaid-auto-xs svg {
+      max-width: 30% !important;
+    }
     .mermaid-auto-sm svg {
-      max-width: 35% !important;
+      max-width: 45% !important;
     }
     .mermaid-auto-md svg {
-      max-width: 50% !important;
+      max-width: 60% !important;
     }
     .mermaid-auto-lg svg, .mermaid-auto-xl svg {
-      max-width: 85% !important;
+      max-width: 90% !important;
+    }
+    section h2 {
+      font-size: 1.6em !important;
+    }
+    .title h1 {
+      font-size: 2.8em !important;
+    }
+  }
+  /* 小さい画面サイズ対応 */
+  @media (max-width: 960px) {
+    :root {
+      --section-spacing: 1.2em;
+    }
+    .title h1 {
+      font-size: 2.5em !important;
+    }
+    .title h3 {
+      font-size: 1.3em !important;
+    }
+    section h2 {
+      font-size: 1.5em !important;
+    }
+    .info-box {
+      padding: 10px 12px !important;
     }
   }
 ---
@@ -161,9 +256,9 @@ _class: title dark
 
 ![bg](../assets/images/3shake-background-full.png)
 
-<img src="../assets/images/3shake-logo.png" alt="3-SHAKE logo" style="position: absolute !important; top: 5px !important; left: 5px !important; width: 240px !important; height: auto !important; z-index: 9999 !important;">
+<img src="../assets/images/3shake-logo.png" alt="3-SHAKE logo" class="title-logo">
 
-<div class="title" style="text-align: left; margin-top: 180px; margin-left: 50px; padding-left: 0;">
+<div class="title" style="text-align: left !important; margin-top: 180px; margin-left: 50px; padding-left: 0;">
 
 # 3-shake テンプレート<br>タイトル<span class="highlight-yellow">入力</span>
 
@@ -171,7 +266,7 @@ _class: title dark
 
 </div>
 
-<div class="author-info" style="text-align: left; padding-left: 0; text-indent: 0;">
+<div class="author-info">
 2025/5/10 ハッピーバースデー@nwiizo  
 </div>
 
@@ -182,10 +277,9 @@ _class: title dark
 ![bg left:45%](../assets/images/nwiizo_icon.jpg)
 ## nwiizo
 
-<div class="info-box">
+
 株式会社スリーシェイクでソフトウェアエンジニアとして活動しています。</br>
 趣味：読書、格闘技、グラビアディガー
-</div>
 
 ### ブログ・オンライン活動
 
@@ -267,10 +361,28 @@ flowchart TD
     E --> E1(ポストモーテム)
     E --> E2(心理的安全性)
     E --> E3(DevOps協働)
+    
+    %% スタイル設定
+    classDef default fill:#f4f4f4,stroke:#333,stroke-width:1px
+    classDef main fill:#4AADDD,stroke:#0a1929,stroke-width:2px,color:white
+    classDef pillar fill:#0a1929,stroke:#333,stroke-width:1px,color:white
+    classDef reliability fill:#ECBE30,stroke:#333,stroke-width:1px,color:white
+    classDef automation fill:#5FB878,stroke:#333,stroke-width:1px,color:white
+    classDef measurement fill:#4AADDD,stroke:#333,stroke-width:1px,color:white
+    classDef culture fill:#9370DB,stroke:#333,stroke-width:1px,color:white
+    
+    %% クラス適用
+    class A main
+    class B,C,D,E pillar
+    class B1,B2,B3 reliability
+    class C1,C2,C3 automation
+    class D1,D2,D3 measurement
+    class E1,E2,E3 culture
 </pre>
 
 <div class="info-box">
 SREは信頼性、自動化、測定、文化という4つの柱から成り、これらが相互に連携してサービスの安定性と俊敏性を実現します。
+各要素が組織に根付くことで、エンジニアリングと運用の境界を超えた効率的なサービス提供が可能になります。
 </div>
 
 ---
@@ -398,6 +510,18 @@ SLIとSLOは感覚的な信頼性議論を客観的かつ数値的な議論に�
 
 ## <span class="highlight-green">SREライフサイクル</span>
 
+### SREの継続的改善プロセス
+
+<div class="info-box">
+SREのライフサイクルは単なる障害対応ではなく、継続的なサービス改善のフィードバックループを形成します。
+各フェーズが連携することで、システムの信頼性と開発速度の両立を実現します。
+</div>
+
+---
+
+<!-- _backgroundColor: white -->
+
+## <span class="highlight-green">SREライフサイクル</span>
 
 <pre class="mermaid mermaid-auto-xs">
 flowchart TD
@@ -412,14 +536,22 @@ flowchart TD
     H --> I[トイル削減]
     I --> J[サービス改善]
     J --> B
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style D fill:#bbf,stroke:#333,stroke-width:2px
-    style J fill:#bfb,stroke:#333,stroke-width:2px
+    
+    %% 3shake カラースキームを適用
+    style A fill:#4AADDD,stroke:#0a1929,stroke-width:2px,color:white
+    style B fill:#f4f4f4,stroke:#333,stroke-width:1px
+    style C fill:#f4f4f4,stroke:#333,stroke-width:1px
+    style D fill:#ECBE30,stroke:#333,stroke-width:2px,color:white
+    style E fill:#f4f4f4,stroke:#333,stroke-width:1px
+    style F fill:#f4f4f4,stroke:#333,stroke-width:1px
+    style G fill:#f4f4f4,stroke:#333,stroke-width:1px
+    style H fill:#f4f4f4,stroke:#333,stroke-width:1px
+    style I fill:#f4f4f4,stroke:#333,stroke-width:1px
+    style J fill:#5FB878,stroke:#333,stroke-width:2px,color:white
+    
+    %% エッジスタイル
+    linkStyle default stroke:#999,stroke-width:2px
 </pre>
-
-<div class="info-box">
-SREのライフサイクルは単なる障害対応ではなく、継続的なサービス改善のフィードバックループを形成します。
-</div>
 
 ---
 
@@ -456,10 +588,28 @@ SREのライフサイクルは単なる障害対応ではなく、継続的な�
 
 ## <span class="highlight-green">SREプラットフォーム構成</span>
 
-### コンポーネント間の関係
-
 <pre class="mermaid mermaid-auto-xs">
 erDiagram
+    %% エンティティ定義
+    SERVICE {
+        string name
+        string version
+        string owner
+    }
+    METRICS {
+        string type
+        int retention
+    }
+    LOGS {
+        string level
+        int retention
+    }
+    TRACES {
+        string spanID
+        string traceID
+    }
+    
+    %% リレーションシップ
     SERVICE ||--o{ METRICS : produces
     SERVICE ||--o{ LOGS : generates
     SERVICE ||--o{ TRACES : creates
@@ -483,6 +633,7 @@ erDiagram
 
 <div class="info-box">
 SREプラットフォームは相互に連携するコンポーネントで構成され、サービスのモニタリングから改善までの一貫したフローを実現します。
+各コンポーネントが明確な責務を持ち、データの収集から分析、アラート、自動化までをシームレスに連携させます。
 </div>
 
 ---
@@ -629,7 +780,9 @@ SREプラットフォームは相互に連携するコンポーネントで構�
 
 ## <span class="highlight-yellow">インシデント管理フロー</span>
 
-<pre class="mermaid mermaid-auto-xs">
+### 効率的なインシデント対応プロセス
+
+<pre class="mermaid mermaid-auto-md">
 sequenceDiagram
     participant M as モニタリング
     participant SRE as SREチーム
@@ -637,7 +790,18 @@ sequenceDiagram
     participant Ops as 運用チーム
     participant Mgmt as マネジメント
 
-    M->>SRE: アラート検知
+    %% スタイル設定
+    rect rgb(240, 196, 60, 0.2)
+    Note over M,SRE: 検知フェーズ
+    end
+    rect rgb(74, 173, 221, 0.2)
+    Note over SRE,Mgmt: 対応フェーズ
+    end
+    rect rgb(95, 184, 120, 0.2)
+    Note over SRE,Dev: 復旧・改善フェーズ
+    end
+
+    M->>+SRE: アラート検知
     Note over SRE: インシデント宣言
     SRE->>SRE: 重要度評価
     alt 重大インシデント
@@ -653,14 +817,15 @@ sequenceDiagram
     SRE->>Dev: レビュー・確認
     Dev->>Ops: 修正デプロイ
     Ops->>SRE: 復旧確認
-    SRE->>Mgmt: 状況報告
+    SRE->>-Mgmt: 状況報告
     Note over SRE: インシデントクローズ
     SRE->>SRE: ポストモーテム作成
-    SRE->>Dev: 恒久対策実施
+    SRE-->>Dev: 恒久対策実施
 </pre>
 
 <div class="info-box">
 明確に定義されたインシデント管理フローにより、迅速かつ効率的な障害対応と学習サイクルを実現します。
+フェーズごとの責任と連携を明確にすることで、混乱を最小限に抑え、復旧時間を短縮します。
 </div>
 
 ---
@@ -963,17 +1128,18 @@ _class: title dark
 ![bg](../assets/images/3shake-background-full.png)
 
 <!-- タイトルページ左上に大きなロゴを表示 -->
-<div style="position: absolute !important; top: 5px !important; left: 5px !important; z-index: 9999 !important; margin: 0 !important; padding: 0 !important;">
-  <img src="../assets/images/3shake-logo.png" style="width: 240px !important; height: auto !important; display: block !important;">
-</div>
+<img src="../assets/images/3shake-logo.png" alt="3-SHAKE logo" class="title-logo">
 
-<div style="text-align: center; margin-top: 200px;">
+<div class="thank-you-slide">
 
 # ありがとう<span class="highlight-yellow">ございました</span>
 
 ### ご質問・ご相談はお気軽にお問い合わせください
 
+<div style="margin-top: 30px; font-size: 1.2em;">
 @nwiizo | https://syu-m-5151.hatenablog.com/
+</div>
+
 </div>
 
 <script type="module">
@@ -983,7 +1149,18 @@ import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.es
 mermaid.initialize({ 
   startOnLoad: true,
   theme: 'default',
-  fontSize: 16
+  fontSize: 16,
+  fontFamily: "'Helvetica Neue', Arial, sans-serif",
+  flowchart: {
+    curve: 'basis',
+    padding: 15
+  },
+  sequence: {
+    mirrorActors: false,
+    bottomMarginAdj: 10,
+    boxMargin: 10,
+    noteMargin: 10
+  }
 });
 
 // ダイアグラムのサイズを自動調整する関数
@@ -1031,6 +1208,9 @@ function autoSizeMermaidDiagrams() {
           sizeClass = classCount <= 2 ? 'mermaid-auto-sm' : 'mermaid-auto-md';
         } else if (content.includes('erdiagram')) {
           // エンティティ数に基づいてサイズを決定
+          sizeClass = 'mermaid-auto-md';
+        } else if (content.includes('pie')) {
+          // 円グラフは小さめに
           sizeClass = 'mermaid-auto-sm';
         } else {
           // その他のダイアグラム
@@ -1039,6 +1219,10 @@ function autoSizeMermaidDiagrams() {
         
         // サイズクラスを適用
         diagram.classList.add(sizeClass);
+        
+        // SVGの表示を最適化
+        svg.setAttribute('width', '100%');
+        svg.style.maxHeight = '80vh';
       }
     });
     
@@ -1051,5 +1235,10 @@ function autoSizeMermaidDiagrams() {
 window.addEventListener('load', () => {
   // 少し遅延させて実行（Mermaidのレンダリング完了を待つ）
   setTimeout(autoSizeMermaidDiagrams, 500);
+  
+  // ウィンドウサイズ変更時にも再調整
+  window.addEventListener('resize', () => {
+    setTimeout(autoSizeMermaidDiagrams, 200);
+  });
 });
 </script>
