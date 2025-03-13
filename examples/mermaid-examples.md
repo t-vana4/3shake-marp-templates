@@ -82,7 +82,7 @@ flowchart TD
 
 # シーケンス図の例
 
-<pre class="mermaid mermaid-auto-sm">
+<pre class="mermaid mermaid-auto-s">
 sequenceDiagram
     participant User as ユーザー
     participant Front as フロントエンド
