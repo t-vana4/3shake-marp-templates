@@ -42,10 +42,10 @@ Collection of Marp-based presentation templates for [3-SHAKE](https://3-shake.co
 
 ```bash
 # PDFへの変換
-npx @marp-team/marp-cli@latest 3shake-presentation.md --pdf
+npx @marp-team/marp-cli@latest 3shake-presentation.md --pdf --allow-local-files
 
 # PowerPointへの変換
-npx @marp-team/marp-cli@latest 3shake-presentation.md --pptx
+npx @marp-team/marp-cli@latest 3shake-presentation.md --pptx --allow-local-files
 ```
 
 ## 引用スタイル
