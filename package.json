@@ -1,0 +1,16 @@
+{
+  "name": "3shake-marp-templates",
+  "version": "1.0.0",
+  "description": "3-SHAKE Marp presentation templates",
+  "scripts": {
+    "start": "marp -s . --html --allow-local-files",
+    "build": "marp --html --allow-local-files",
+    "preview": "marp -s --preview --html --allow-local-files"
+  },
+  "dependencies": {
+    "@marp-team/marp-cli": "^4.1.2",
+    "@marp-team/marp-core": "^4.0.1",
+    "@marp-team/marpit": "^2.0.0",
+    "mermaid": "^10.8.0"
+  }
+}
