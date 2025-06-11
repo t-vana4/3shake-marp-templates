@@ -130,3 +130,56 @@ When modifying themes:
 - Always wrap diagrams in HTML divs with sizing classes
 - Use HTML comments to hide Marp directives from Mermaid
 - Test diagrams in preview mode before building
+
+## Presentation Creation Best Practices
+
+### Content Strategy
+- **Follow the narrative arc**: Introduction → Problem → Solution → Conclusion
+- **One message per slide**: Keep each slide focused on a single concept
+- **Use concrete examples**: Replace abstract concepts with specific data and real-world examples
+- **Audience-appropriate content**: Adjust technical depth based on audience expertise
+
+### Visual Design Principles
+- **Leverage contrast**: Use color, size, and positioning to highlight key information
+- **Embrace white space**: Avoid cramming too much content; prioritize readability
+- **Maintain consistency**: Standardize fonts, colors, and layouts throughout
+- **Strategic image use**: Combine text with relevant visuals for better retention
+
+### Technical Implementation Tips
+```markdown
+<!-- Effective slide layouts -->
+<!-- _class: lead -->          # Title slides
+<!-- _class: split -->         # Two-column layouts  
+<!-- _class: invert -->        # Dark theme slides
+<!-- _backgroundColor: #f0f0f0 --> # Custom backgrounds
+
+<!-- Proper image referencing -->
+![Alt text](./assets/images/2025/presentation-name/diagram.png)
+
+<!-- Structured emphasis -->
+**Primary emphasis** (bold)
+*Secondary emphasis* (italic)
+`Code elements` (inline code)
+
+<!-- Hierarchical lists -->
+1. Main point
+   - Supporting detail
+   - Additional context
+     - Granular information
+```
+
+### Performance and Organization
+- **Optimize image sizes**: Use appropriately sized images for web delivery
+- **Maintain file structure**: Follow `assets/images/year/presentation-name/` convention
+- **Choose appropriate themes**: Select themes that match presentation context
+- **Test across formats**: Verify appearance in HTML, PDF, and PPTX outputs
+
+### Time Management Guidelines
+- **1-2 minutes per slide**: Calculate total slides based on presentation duration
+- **Include buffer time**: Account for Q&A and potential technical issues
+- **Practice with timing**: Rehearse presentation to validate pacing
+
+### Engagement Strategies
+- **Repeat key messages**: Reinforce important points multiple times
+- **Interactive elements**: Include polls, questions, or discussion prompts
+- **Backup materials**: Prepare appendix slides for detailed Q&A responses
