@@ -85,18 +85,7 @@ npx @marp-team/marp-cli@latest slides/my-presentation.md --html --allow-local-fi
 
 このテンプレートは包括的なMermaid図表サポートを提供します。詳細な例は `examples/mermaid-examples.md` を参照してください。
 
-```markdown
-<div class="mermaid-md">
-
-```mermaid
-flowchart TD
-    A[Start] --> B{Decision}
-    B -->|Yes| C[Action]
-    B -->|No| D[Alternative]
-```
-
-</div>
-```
+そこまで良いものではないので画像を使用することを推奨します。
 
 利用可能なサイズクラス：
 - `.mermaid-xs` - 200px（超小）
