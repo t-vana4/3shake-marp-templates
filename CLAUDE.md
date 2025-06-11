@@ -29,6 +29,27 @@ npx @marp-team/marp-cli@latest slides/[presentation].md --pptx --allow-local-fil
 npx @marp-team/marp-cli@latest slides/[presentation].md --html --allow-local-files
 ```
 
+### Neovim Integration (marp.nvim)
+```bash
+# Setup marp.nvim plugin (lazy.nvim)
+{
+  'nwiizo/marp.nvim',
+  ft = "markdown",
+  config = function()
+    require("marp").setup {
+      marp_command = "/path/to/marp",
+      server_mode = false
+    }
+  end,
+}
+
+# Key commands within Neovim:
+# :MarpWatch - Start live preview
+# :MarpStop - Stop watching
+# :MarpExport [format] - Export to various formats
+# :MarpTheme [theme] - Switch themes
+```
+
 ### Testing Mermaid Diagrams
 ```bash
 # Preview with Mermaid support
@@ -70,11 +91,20 @@ Renders with proper styling for academic/professional citations.
 - **Local files allowed**: Necessary for accessing theme CSS and images
 - **Theme inheritance**: Custom themes extend Marp's default theme
 
-### VS Code Integration
-The repository includes VS Code settings that:
+### Editor Integration
+The repository supports multiple editors:
+
+**VS Code Integration:**
 - Enable HTML in Markdown preview
 - Configure Marp preview settings
 - Set up proper file associations
+
+**Neovim Integration (marp.nvim):**
+- Live preview with `:MarpWatch`
+- Export functionality with `:MarpExport [format]`
+- Theme switching with `:MarpTheme [theme]`
+- Auto-cleanup on buffer close
+- Support for HTML, PDF, PPTX, PNG, JPEG formats
 
 ### Asset Management
 Images are organized by year and presentation to maintain clarity:

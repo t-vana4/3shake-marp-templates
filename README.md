@@ -66,7 +66,7 @@ npm run preview
 
 ### ファイル出力
 
-[Marp CLI](https://github.com/marp-team/marp-cli) または [Marp for VS Code](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode) を使用してPDFやPPTXに変換できます。
+[Marp CLI](https://github.com/marp-team/marp-cli)、[Marp for VS Code](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)、または [marp.nvim](https://github.com/nwiizo/marp.nvim) を使用してPDFやPPTXに変換できます。
 
 ```bash
 # PDFへの変換
@@ -78,6 +78,37 @@ npx @marp-team/marp-cli@latest slides/my-presentation.md --pptx --allow-local-fi
 # HTMLへの変換
 npx @marp-team/marp-cli@latest slides/my-presentation.md --html --allow-local-files
 ```
+
+### Neovim ユーザー向け (marp.nvim)
+
+[marp.nvim](https://github.com/nwiizo/marp.nvim) プラグインを使用することで、Neovim内でMarpプレゼンテーションを効率的に作成・編集できます。
+
+**インストール (lazy.nvim):**
+```lua
+{
+  'nwiizo/marp.nvim',
+  ft = "markdown",
+  config = function()
+    require("marp").setup {
+      marp_command = "/path/to/marp",
+      server_mode = false
+    }
+  end,
+}
+```
+
+**主要コマンド:**
+- `:MarpWatch` - ライブプレビュー開始
+- `:MarpStop` - 監視停止
+- `:MarpExport [format]` - プレゼンテーション出力（HTML、PDF、PPTX、PNG、JPEG対応）
+- `:MarpTheme [theme]` - テーマ切り替え
+
+**特徴:**
+- 🔄 ライブプレビュー（自動リフレッシュ）
+- 🛑 自動クリーンアップ（バッファクローズ時）
+- 📤 マルチフォーマット出力対応
+- 🎨 簡単なテーマ切り替え
+- ✂️ プレゼンテーション要素用スニペット
 
 ## 高度な機能
 
