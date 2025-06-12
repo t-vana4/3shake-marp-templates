@@ -188,6 +188,50 @@ npx @marp-team/marp-cli@latest slides/my-presentation.md --html --allow-local-fi
 <!-- _backgroundColor: #1a1a1a -->
 ```
 
+#### 画像とテキストを組み合わせたレイアウト
+```markdown
+<!-- 画像左、テキスト右のレイアウト -->
+## <span class="highlight-blue">タイトル</span>
+
+<div style="display: flex; gap: 40px;">
+<div style="width: 35%;">
+<img src="../../assets/images/2025/presentation-name/image.jpg" alt="説明" style="width: 100%; height: fit-content;">
+<div style="font-size: 0.7em; text-align: left; margin-top: 5px;">
+参考：画像の出典や説明
+</div>
+</div>
+
+<div style="flex: 1;">
+メインコンテンツをここに記載します。</br></br>
+
+1. **ポイント1**
+2. **ポイント2**  
+3. **ポイント3**
+</div>
+</div>
+
+<!-- 画像中央配置レイアウト -->
+## タイトル
+
+<div style="text-align: center;">
+<img src="../../assets/images/2025/presentation-name/diagram.png" alt="図表説明" style="max-width: 80%; height: auto;">
+</div>
+
+**図1: 図表の説明文**
+
+<!-- 複数画像の並列表示 -->
+<div style="display: flex; gap: 20px; justify-content: center;">
+<div style="text-align: center;">
+<img src="image1.png" alt="説明1" style="width: 300px;">
+<div style="font-size: 0.8em;">説明1</div>
+</div>
+<div style="text-align: center;">
+<img src="image2.png" alt="説明2" style="width: 300px;">
+<div style="font-size: 0.8em;">説明2</div>
+</div>
+</div>
+```
+
 #### Markdownの効果的な使い方
 ```markdown
 <!-- 強調の使い分け -->
@@ -208,10 +252,36 @@ npx @marp-team/marp-cli@latest slides/my-presentation.md --html --allow-local-fi
 | B | 内容B | 注釈 |
 ```
 
+#### 高度なスタイリングTips
+```markdown
+<!-- ハイライト色の活用 -->
+<span class="highlight-blue">重要なキーワード</span>
+<span class="highlight-yellow">注意点</span>
+
+<!-- カスタムCSSクラスの活用 -->
+<div class="two-column">
+<div class="column-left">
+左側のコンテンツ
+</div>
+<div class="column-right">
+右側のコンテンツ
+</div>
+</div>
+
+<!-- レスポンシブな画像表示 -->
+<img src="image.png" style="max-width: 100%; height: auto; border-radius: 8px;">
+
+<!-- 引用や注釈のスタイリング -->
+<blockquote style="border-left: 4px solid #4AADDD; padding-left: 1em; font-style: italic;">
+重要な引用文
+</blockquote>
+```
+
 #### パフォーマンス最適化
 - **画像サイズの最適化**: 必要以上に大きな画像は避ける
 - **ファイル構成の整理**: assets/images/年度/プレゼン名/ の構造を維持
 - **テーマの選択**: 用途に応じて適切なテーマを選択
+- **HTMLとCSSの活用**: Marpでは直接HTMLが使用可能、柔軟なレイアウトを実現
 
 ## カスタマイズ
 

@@ -166,6 +166,55 @@ When modifying themes:
    - Supporting detail
    - Additional context
      - Granular information
+
+<!-- Advanced image and text layouts -->
+<!-- Image left, text right layout -->
+## <span class="highlight-blue">Section Title</span>
+
+<div style="display: flex; gap: 40px;">
+<div style="width: 35%;">
+<img src="../../assets/images/2025/presentation-name/image.jpg" alt="description" style="width: 100%; height: fit-content;">
+<div style="font-size: 0.7em; text-align: left; margin-top: 5px;">
+Source: Image attribution or description
+</div>
+</div>
+
+<div style="flex: 1;">
+Main content goes here.</br></br>
+
+1. **Point 1**
+2. **Point 2**  
+3. **Point 3**
+</div>
+</div>
+
+<!-- Centered image layout -->
+<div style="text-align: center;">
+<img src="diagram.png" alt="diagram" style="max-width: 80%; height: auto;">
+</div>
+
+**Figure 1: Diagram description**
+
+<!-- Multiple images side by side -->
+<div style="display: flex; gap: 20px; justify-content: center;">
+<div style="text-align: center;">
+<img src="image1.png" alt="desc1" style="width: 300px;">
+<div style="font-size: 0.8em;">Caption 1</div>
+</div>
+<div style="text-align: center;">
+<img src="image2.png" alt="desc2" style="width: 300px;">
+<div style="font-size: 0.8em;">Caption 2</div>
+</div>
+</div>
+
+<!-- Advanced styling -->
+<span class="highlight-blue">Highlighted text</span>
+<span class="highlight-yellow">Warning text</span>
+
+<!-- Custom blockquotes -->
+<blockquote style="border-left: 4px solid #4AADDD; padding-left: 1em; font-style: italic;">
+Important quotation or emphasis
+</blockquote>
 ```
 
 ### Performance and Organization
@@ -173,6 +222,7 @@ When modifying themes:
 - **Maintain file structure**: Follow `assets/images/year/presentation-name/` convention
 - **Choose appropriate themes**: Select themes that match presentation context
 - **Test across formats**: Verify appearance in HTML, PDF, and PPTX outputs
+- **HTML/CSS flexibility**: Leverage direct HTML and CSS for advanced layouts beyond standard Markdown
 
 ### Time Management Guidelines
 - **1-2 minutes per slide**: Calculate total slides based on presentation duration
