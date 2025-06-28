@@ -69,14 +69,29 @@ npm run preview
 [Marp CLI](https://github.com/marp-team/marp-cli)、[Marp for VS Code](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)、または [marp.nvim](https://github.com/nwiizo/marp.nvim) を使用してPDFやPPTXに変換できます。
 
 ```bash
-# PDFへの変換
+# PDFへの変換（ローカルにmarpがインストールされている場合）
+marp slides/my-presentation.md --pdf --allow-local-files
+
+# PDFへの変換（npxを使用）
 npx @marp-team/marp-cli@latest slides/my-presentation.md --pdf --allow-local-files
 
 # PowerPointへの変換
-npx @marp-team/marp-cli@latest slides/my-presentation.md --pptx --allow-local-files
+marp slides/my-presentation.md --pptx --allow-local-files
 
 # HTMLへの変換
-npx @marp-team/marp-cli@latest slides/my-presentation.md --html --allow-local-files
+marp slides/my-presentation.md --html --allow-local-files
+```
+
+### ライブプレビュー（Watchモード）
+
+ファイルの変更を監視して自動的に再生成する機能：
+
+```bash
+# Watchモードでブラウザ自動起動
+marp slides/my-presentation.md --html --allow-local-files --watch & open slides/my-presentation.html
+
+# 具体例
+marp slides/2025/claude-code-beyond.md --html --allow-local-files --watch & open slides/2025/claude-code-beyond.html
 ```
 
 ### Neovim ユーザー向け (marp.nvim)

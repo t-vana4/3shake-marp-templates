@@ -19,14 +19,26 @@ npm run preview
 
 ### Building Presentations
 ```bash
-# Convert to PDF
+# Convert to PDF (if marp is installed locally)
+marp slides/[presentation].md --pdf --allow-local-files
+
+# Convert to PDF (using npx)
 npx @marp-team/marp-cli@latest slides/[presentation].md --pdf --allow-local-files
 
 # Convert to PowerPoint
-npx @marp-team/marp-cli@latest slides/[presentation].md --pptx --allow-local-files
+marp slides/[presentation].md --pptx --allow-local-files
 
 # Convert to HTML
-npx @marp-team/marp-cli@latest slides/[presentation].md --html --allow-local-files
+marp slides/[presentation].md --html --allow-local-files
+```
+
+### Watch Mode (Live Reload)
+```bash
+# Watch mode with automatic browser opening
+marp slides/[presentation].md --html --allow-local-files --watch & open slides/[presentation].html
+
+# Example for specific presentation
+marp slides/2025/claude-code-beyond.md --html --allow-local-files --watch & open slides/2025/claude-code-beyond.html
 ```
 
 ### Neovim Integration (marp.nvim)
