@@ -132,7 +132,7 @@ _class: title dark
 
 <div class="title" style="text-align: left; margin-top: 100px; margin-left: 20px; padding-left: 0; max-width: 70%;">
 
-# <span style="font-size: 0.8em;">顧客案件における</br>生成AI利用ガイドラインの説明</span>
+# <span style="font-size: 0.7em;">生成AI利活用ガイドラインの説明</span>
 
 </div>
 
@@ -144,13 +144,11 @@ _class: title dark
 
 ## なぜガイドラインが必要なのか？
 
-[『顧客案件における生成AI利用ガイドライン』](https://www.notion.so/3shake/AI-224b1e6bcbc280cb82fddae88eed6b73?source=copy_link)は、生成AIの利用を制限するためのものではなく、
-生成AIを顧客案件で<span class="highlight-red">**「安全」かつ「戦略的」に活用できるようにするための指針**</span>です。
+[『生成AI利活用ガイドライン』](https://www.notion.so/3shake/AI-207b1e6bcbc28096b9f2c58cf0322ebd?source=copy_link) および [『顧客案件における生成AI利用ガイドライン』](https://www.notion.so/3shake/AI-224b1e6bcbc280cb82fddae88eed6b73?source=copy_link)は、
+生成AIの利用を制限するためのものではなく、スリーシェイクのメンバー全員が
+<span class="highlight-red">**「安全」かつ「戦略的」に**</span> 生成AIを活用できるようにするための指針です。
 
-<br>
-
-エンジニアのみなさんが生成AIを安心して使いこなすための<span class="highlight-red">**「攻めのガードレール」**</span>となるように、
-このガイドラインを策定しました。
+そのための<span class="highlight-red">**「攻めのガードレール」**</span>として、これらのガイドラインを策定しました。
 
 ---
 
@@ -169,7 +167,7 @@ _class: title dark
 
 ## 基本方針
 
-顧客案件における生成AIの基本的な利用方針は次のとおりです。
+生成AIの基本的な利用方針は次のとおりです。
 
 <style>
 .container { display: flex; gap: 20px; align-items: stretch; margin-top: 20px !important; }
@@ -275,7 +273,7 @@ AIの生成物は「素材」と捉え、最終的な成果物には<span class=
 
 ## 重要ルール 4.　顧客との合意
 
-AIツールの利用方針を事前に顧客に説明して合意してください。
+AIツールを顧客案件で利用する場合は、利用方針を事前に顧客に説明して合意してください。
 
 <style>
 .agreement-table { width: 100%; border-collapse: collapse; margin-top: 15px !important; font-size: 22px; }
@@ -327,9 +325,49 @@ AIツールの利用方針を事前に顧客に説明して合意してくださ
 
 ---
 
-## 使えるツールの条件
+## AIツールの使い分け
 
-新しい生成AIツールを利用したい場合、以下のような条件を満たしているかどうかを調査した上で、
+<style>
+.incident-container { display: flex; gap: 20px; align-items: top; margin-top: 20px !important; }
+.incident-box { flex: 1; padding: 15px; border-radius: 10px; border: 1px solid #ccc; font-size: 0.9em; }
+.incident-box h3 { text-align: center; margin-top: 0; padding-bottom: 10px; border-bottom: 1px solid #999; font-size: 1.1em; }
+.incident-box ul { padding-left: 20px; }
+</style>
+
+<div class="incident-container">
+<div class="incident-box">
+<h3>機密情報の入力もOK</h3>
+<ul>
+  <li>Geake</li>
+  <li>Google Gemini *</li>
+  <li>Google NotebookLM *</li>
+  <div style="font-size: 0.7em; text-align: left; margin-top: 10px !important; padding-right: 20px;">
+  * スリーシェイクの Google アカウントで利用してください
+  </div>
+</ul>
+</div>
+<div class="incident-box">
+<h3>機密情報を扱わないなら利用OK</h3>
+<ul>
+  <li>ChatGPT</li>
+  <li>Claude</li>
+  <li>Perplexity</li>
+  <div style="font-size: 0.7em; text-align: left; margin-top: 10px !important; padding-right: 20px;">
+  など
+  </div>
+</ul>
+</div>
+</div>
+
+<br>
+
+使い分けのポイントは<span class="highlight-red">**「機密情報を扱うかどうか」**</span>です。
+
+---
+
+## 新しいツールを使いたい場合
+
+新しい生成AIツールを使いたい場合は、以下のような条件を満たしているかどうかを調査した上で、
 総合的に利用可否を判断します。
 
 - **データ非学習保証：** 入力データがAIの学習に使われない
