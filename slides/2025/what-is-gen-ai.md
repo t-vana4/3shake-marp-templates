@@ -131,7 +131,7 @@ _class: title dark
 </div>
 
 <div class="author-info" style="text-align: left; padding-left: 0; text-indent: 0;">
-2025/xx/xx</br>Hajime Tachibana
+Hajime Tachibana
 </div>
 
 ---
@@ -956,6 +956,465 @@ AIに指示を与え、望む結果を引き出すための<br/>「入力」や�
    
 2. <font color=#E5E8EA>生成AIに関する基礎知識</font>
 
+3. Google Geminiを使ってみよう
+
+4. <font color=#E5E8EA>生成AIをより上手に使うために</font>
+
+5. <font color=#E5E8EA>まとめ</font>
+
+---
+
+## 第3章で学ぶこと
+
+実際にGoogle Geminiを使いながら、生成AIの基本操作を体験します。
+
+### この章のポイント
+
+1. **Geminiにアクセスする** 〜 すぐに始められる
+2. **最初の質問をしてみる** 〜 基本的な使い方
+3. **プロンプトを改善する** 〜 より良い回答を得るために
+4. **実践演習** 〜 業務で使えるシーンを体験
+
+<div style="background: #e8f5e9; padding: 15px; border-radius: 8px; border-left: 5px solid #388e3c; margin-top: 25px;">
+💡 このセクションでは、実際に手を動かしながら学びます！
+</div>
+
+---
+
+## Google Geminiとは？
+
+<div style="font-size: 0.95em;">
+
+<div style="background: linear-gradient(135deg, #4285f4 0%, #34a853 100%); color: white; padding: 25px; border-radius: 12px; margin: 20px 0;">
+<div style="font-size: 1.3em; font-weight: bold; margin-bottom: 10px;">🌟 Google Gemini</div>
+Googleが開発した最新の生成AI  
+Googleアカウントがあれば無料ですぐに使える
+</div>
+
+<br>
+
+### Geminiの特徴
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
+
+<div style="background: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #388e3c;">
+<div style="font-weight: bold; color: #388e3c; margin-bottom: 10px;">✅ 無料で利用可能</div>
+Googleアカウントだけで始められる
+</div>
+
+<div style="background: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #1976d2;">
+<div style="font-weight: bold; color: #1976d2; margin-bottom: 10px;">✅ 日本語対応</div>
+自然な日本語で会話できる
+</div>
+
+<div style="background: #fff3e0; padding: 20px; border-radius: 10px; border-left: 5px solid #f57c00;">
+<div style="font-weight: bold; color: #f57c00; margin-bottom: 10px;">✅ マルチモーダル</div>
+テキスト、画像、コードに対応
+</div>
+
+<div style="background: #fce4ec; padding: 20px; border-radius: 10px; border-left: 5px solid #c2185b;">
+<div style="font-weight: bold; color: #c2185b; margin-bottom: 10px;">✅ Google連携</div>
+Googleサービスとシームレスに連携
+</div>
+
+</div>
+
+</div>
+
+---
+
+## Geminiを始める：3ステップ
+
+<div style="font-size: 0.9em;">
+
+非常にシンプルです。数分で始められます。
+
+<br>
+
+<div style="display: flex; flex-direction: column; gap: 20px; margin: 25px 0;">
+
+<div style="background: #e3f2fd; border: 3px solid #1976d2; padding: 25px; border-radius: 12px;">
+<div style="display: flex; align-items: center; gap: 20px;">
+<div style="background: #1976d2; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5em; font-weight: bold; flex-shrink: 0;">1</div>
+<div>
+<div style="font-weight: bold; color: #1976d2; font-size: 1.2em; margin-bottom: 5px;">Webブラウザを開く</div>
+<div style="font-size: 0.95em;">Chrome、Safari、Edgeなど、お好みのブラウザで</div>
+</div>
+</div>
+</div>
+
+<div style="background: #fff3e0; border: 3px solid #f57c00; padding: 25px; border-radius: 12px;">
+<div style="display: flex; align-items: center; gap: 20px;">
+<div style="background: #f57c00; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5em; font-weight: bold; flex-shrink: 0;">2</div>
+<div>
+<div style="font-weight: bold; color: #f57c00; font-size: 1.2em; margin-bottom: 5px;">URLにアクセス</div>
+<div style="font-size: 0.95em; font-family: monospace; background: white; padding: 8px; border-radius: 5px; margin-top: 8px;">https://gemini.google.com/</div>
+</div>
+</div>
+</div>
+
+<div style="background: #e8f5e9; border: 3px solid #388e3c; padding: 25px; border-radius: 12px;">
+<div style="display: flex; align-items: center; gap: 20px;">
+<div style="background: #388e3c; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5em; font-weight: bold; flex-shrink: 0;">3</div>
+<div>
+<div style="font-weight: bold; color: #388e3c; font-size: 1.2em; margin-bottom: 5px;">Googleアカウントでログイン</div>
+<div style="font-size: 0.95em;">普段使っているGoogleアカウントでOK</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold;">
+これだけで準備完了！今すぐ始められます
+</div>
+
+</div>
+
+---
+
+## Geminiの画面構成
+
+<div style="font-size: 0.9em;">
+
+シンプルで直感的なインターフェースです。
+
+<br>
+
+<div style="background: white; border: 3px solid #4285f4; padding: 30px; border-radius: 12px; margin: 20px 0;">
+
+<div style="margin-bottom: 25px;">
+<div style="background: #e3f2fd; padding: 15px; border-radius: 8px; border-left: 5px solid #1976d2;">
+<div style="font-weight: bold; color: #1976d2; margin-bottom: 8px;">📝 入力エリア（画面下部）</div>
+質問やプロンプトを入力する場所  
+「メッセージを入力」と書かれたテキストボックス
+</div>
+</div>
+
+<div style="margin-bottom: 25px;">
+<div style="background: #fff3e0; padding: 15px; border-radius: 8px; border-left: 5px solid #f57c00;">
+<div style="font-weight: bold; color: #f57c00; margin-bottom: 8px;">💬 会話エリア（画面中央）</div>
+あなたの質問とGeminiの回答が表示される場所  
+チャット形式で会話が続く
+</div>
+</div>
+
+<div style="margin-bottom: 25px;">
+<div style="background: #e8f5e9; padding: 15px; border-radius: 8px; border-left: 5px solid #388e3c;">
+<div style="font-weight: bold; color: #388e3c; margin-bottom: 8px;">🔄 新しいチャット（画面左上）</div>
+別のトピックで話したいときは「新しいチャット」で開始
+</div>
+</div>
+
+<div>
+<div style="background: #fce4ec; padding: 15px; border-radius: 8px; border-left: 5px solid #c2185b;">
+<div style="font-weight: bold; color: #c2185b; margin-bottom: 8px;">📂 チャット履歴（画面左）</div>
+過去の会話を保存・参照できる
+</div>
+</div>
+
+</div>
+
+</div>
+
+---
+
+## 実践演習①：最初の質問をしてみよう
+
+<div style="font-size: 0.9em;">
+
+まずはシンプルな質問から始めましょう。
+
+<br>
+
+<div style="background: #e8f5e9; border: 3px solid #388e3c; padding: 25px; border-radius: 12px; margin: 20px 0;">
+<div style="font-weight: bold; color: #388e3c; font-size: 1.2em; margin-bottom: 15px;">🎯 演習：簡単な質問をしてみる</div>
+
+<div style="background: white; padding: 20px; border-radius: 8px; margin: 15px 0;">
+<div style="font-weight: bold; margin-bottom: 10px;">入力例：</div>
+<div style="font-family: monospace; background: #f5f5f5; padding: 12px; border-radius: 5px; border-left: 4px solid #388e3c;">
+生成AIとは何ですか？初心者にもわかるように簡単に説明してください。
+</div>
+</div>
+
+<div style="font-size: 0.95em; line-height: 1.6;">
+<div style="margin-bottom: 8px;"><strong>手順：</strong></div>
+1. 上記の文章をコピー、または自分の言葉で入力<br>
+2. Enterキーを押す、または送信ボタンをクリック<br>
+3. Geminiの回答を読んでみる
+</div>
+</div>
+
+<br>
+
+<div style="background: #fff3e0; padding: 15px; border-radius: 8px; border-left: 5px solid #f57c00;">
+💡 <strong>ポイント：</strong>最初は完璧なプロンプトでなくても大丈夫。まずは気軽に話しかけてみましょう！
+</div>
+
+</div>
+
+---
+
+## 実践演習②：プロンプトを改善してみよう
+
+<div style="font-size: 0.85em;">
+
+同じ質問でも、プロンプトの書き方で回答の質が変わります。
+
+<br>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+
+<div style="background: #ffebee; border: 2px solid #d32f2f; padding: 20px; border-radius: 10px;">
+<div style="font-weight: bold; color: #d32f2f; margin-bottom: 12px; font-size: 1.1em;">❌ あいまいな質問</div>
+<div style="background: white; padding: 12px; border-radius: 5px; font-family: monospace; font-size: 0.9em; margin-bottom: 12px;">
+メールを書いて
+</div>
+<div style="font-size: 0.9em;">
+<strong>問題点：</strong><br>
+• 誰に？<br>
+• 何について？<br>
+• どんなトーン？<br>
+→ AIが推測で書くしかない
+</div>
+</div>
+
+<div style="background: #e8f5e9; border: 2px solid #388e3c; padding: 20px; border-radius: 10px;">
+<div style="font-weight: bold; color: #388e3c; margin-bottom: 12px; font-size: 1.1em;">✅ 具体的な指示</div>
+<div style="background: white; padding: 12px; border-radius: 5px; font-family: monospace; font-size: 0.85em; margin-bottom: 12px; line-height: 1.5;">
+取引先の田中様に、来週の打ち合わせ日程の変更をお願いするメールを書いてください。丁寧なトーンで、200文字程度でお願いします。
+</div>
+<div style="font-size: 0.9em;">
+<strong>改善点：</strong><br>
+✓ 相手が明確<br>
+✓ 目的が明確<br>
+✓ トーンと文字数を指定
+</div>
+</div>
+
+</div>
+
+<br>
+
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold;">
+🎯 演習：両方試して、回答の違いを体感してみましょう！
+</div>
+
+</div>
+
+---
+
+## 実践演習③：業務で使えるシーン
+
+<div style="font-size: 0.85em;">
+
+実際の業務で今すぐ使える3つのシーンを体験しましょう。
+
+<br>
+
+<div style="display: flex; flex-direction: column; gap: 15px;">
+
+<div style="background: #e3f2fd; border-left: 5px solid #1976d2; padding: 20px; border-radius: 8px;">
+<div style="font-weight: bold; color: #1976d2; font-size: 1.1em; margin-bottom: 10px;">📧 シーン1：メール作成</div>
+<div style="background: white; padding: 12px; border-radius: 5px; font-family: monospace; font-size: 0.9em; line-height: 1.5;">
+新入社員向けに、明日のオリエンテーションの案内メールを作成してください。<br>
+【含める内容】<br>
+・日時：明日10時〜12時<br>
+・場所：本社3F会議室<br>
+・持ち物：筆記用具、社員証<br>
+親しみやすいトーンで、300文字程度でお願いします。
+</div>
+</div>
+
+<div style="background: #fff3e0; border-left: 5px solid #f57c00; padding: 20px; border-radius: 8px;">
+<div style="font-weight: bold; color: #f57c00; font-size: 1.1em; margin-bottom: 10px;">📊 シーン2：データ要約</div>
+<div style="background: white; padding: 12px; border-radius: 5px; font-family: monospace; font-size: 0.9em; line-height: 1.5;">
+以下の会議メモから、決定事項とネクストアクションを抽出してください。<br>
+【会議メモ】<br>
+（ここに実際の議事録を貼り付ける）<br>
+<br>
+箇条書きで、重要度順に並べてください。
+</div>
+</div>
+
+<div style="background: #e8f5e9; border-left: 5px solid #388e3c; padding: 20px; border-radius: 8px;">
+<div style="font-weight: bold; color: #388e3c; font-size: 1.1em; margin-bottom: 10px;">💡 シーン3：アイデア出し</div>
+<div style="background: white; padding: 12px; border-radius: 5px; font-family: monospace; font-size: 0.9em; line-height: 1.5;">
+チームの業務効率化のアイデアを5つ提案してください。<br>
+【条件】<br>
+・コストは月10万円以内<br>
+・3ヶ月以内に実現可能<br>
+・リモートワークにも対応<br>
+各アイデアに、期待効果も添えてください。
+</div>
+</div>
+
+</div>
+
+</div>
+
+---
+
+## うまくいかないときの対処法
+
+<div style="font-size: 0.9em;">
+
+Geminiの回答が期待通りでないときは、以下を試してみましょう。
+
+<br>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0;">
+
+<div style="background: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #1976d2;">
+<div style="font-weight: bold; color: #1976d2; margin-bottom: 10px;">🔄 追加で指示を出す</div>
+<div style="font-size: 0.95em;">
+「もっと詳しく説明してください」<br>
+「専門用語を減らしてください」<br>
+「箇条書きにしてください」
+</div>
+</div>
+
+<div style="background: #fff3e0; padding: 20px; border-radius: 10px; border-left: 5px solid #f57c00;">
+<div style="font-weight: bold; color: #f57c00; margin-bottom: 10px;">✏️ プロンプトを書き直す</div>
+<div style="font-size: 0.95em;">
+・より具体的な情報を追加<br>
+・出力形式を明示<br>
+・例を示す
+</div>
+</div>
+
+<div style="background: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #388e3c;">
+<div style="font-weight: bold; color: #388e3c; margin-bottom: 10px;">🔁 再生成する</div>
+<div style="font-size: 0.95em;">
+回答の下にある「他の下書きを表示」で、別の回答を見る
+</div>
+</div>
+
+<div style="background: #fce4ec; padding: 20px; border-radius: 10px; border-left: 5px solid #c2185b;">
+<div style="font-weight: bold; color: #c2185b; margin-bottom: 10px;">🆕 新しいチャットで試す</div>
+<div style="font-size: 0.95em;">
+会話履歴をリセットして、新しい視点から質問
+</div>
+</div>
+
+</div>
+
+<br>
+
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold;">
+💡 試行錯誤は学習のプロセス。恐れずに何度でもトライしましょう！
+</div>
+
+</div>
+
+---
+
+## Gemini活用のベストプラクティス
+
+<div style="font-size: 0.9em;">
+
+Geminiをより効果的に使うためのヒント：
+
+<br>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-size: 0.85em;">
+
+<div style="background: #e3f2fd; padding: 18px; border-radius: 8px; text-align: center;">
+<div style="font-size: 2em; margin-bottom: 8px;">📝</div>
+<div style="font-weight: bold; color: #1976d2; margin-bottom: 8px;">具体的に</div>
+5W1Hを意識して<br>詳細に伝える
+</div>
+
+<div style="background: #fff3e0; padding: 18px; border-radius: 8px; text-align: center;">
+<div style="font-size: 2em; margin-bottom: 8px;">🎭</div>
+<div style="font-weight: bold; color: #f57c00; margin-bottom: 8px;">役割を与える</div>
+「あなたは〇〇の<br>専門家です」
+</div>
+
+<div style="background: #e8f5e9; padding: 18px; border-radius: 8px; text-align: center;">
+<div style="font-size: 2em; margin-bottom: 8px;">📋</div>
+<div style="font-weight: bold; color: #388e3c; margin-bottom: 8px;">形式を指定</div>
+箇条書き、表形式<br>など明示
+</div>
+
+<div style="background: #fce4ec; padding: 18px; border-radius: 8px; text-align: center;">
+<div style="font-size: 2em; margin-bottom: 8px;">💬</div>
+<div style="font-weight: bold; color: #c2185b; margin-bottom: 8px;">対話を続ける</div>
+不十分なら<br>追加質問する
+</div>
+
+<div style="background: #f3e5f5; padding: 18px; border-radius: 8px; text-align: center;">
+<div style="font-size: 2em; margin-bottom: 8px;">🔍</div>
+<div style="font-weight: bold; color: #7b1fa2; margin-bottom: 8px;">検証する</div>
+重要な情報は<br>必ず確認
+</div>
+
+<div style="background: #e0f2f1; padding: 18px; border-radius: 8px; text-align: center;">
+<div style="font-size: 2em; margin-bottom: 8px;">💾</div>
+<div style="font-weight: bold; color: #00796b; margin-bottom: 8px;">保存する</div>
+良いプロンプトは<br>記録しておく
+</div>
+
+</div>
+
+</div>
+
+---
+
+## 第3章のまとめ
+
+<div style="font-size: 0.95em;">
+
+### Google Geminiで実践体験
+
+<br>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin: 20px 0;">
+
+<div style="background: #e3f2fd; border-radius: 10px; padding: 20px; text-align: center; border-top: 5px solid #1976d2;">
+<div style="font-size: 1.8em; margin-bottom: 10px;">🚀</div>
+<div style="font-weight: bold; color: #1976d2; margin-bottom: 8px;">始め方</div>
+<div style="font-size: 0.85em;">
+gemini.google.com<br/>
+すぐに始められる
+</div>
+</div>
+
+<div style="background: #fff3e0; border-radius: 10px; padding: 20px; text-align: center; border-top: 5px solid #f57c00;">
+<div style="font-size: 1.8em; margin-bottom: 10px;">💬</div>
+<div style="font-weight: bold; color: #f57c00; margin-bottom: 8px;">使い方</div>
+<div style="font-size: 0.85em;">
+具体的に質問<br/>
+対話を重ねる
+</div>
+</div>
+
+<div style="background: #e8f5e9; border-radius: 10px; padding: 20px; text-align: center; border-top: 5px solid #388e3c;">
+<div style="font-size: 1.8em; margin-bottom: 10px;">📊</div>
+<div style="font-weight: bold; color: #388e3c; margin-bottom: 8px;">実践</div>
+<div style="font-size: 0.85em;">
+業務シーンで<br/>すぐ活用できる
+</div>
+</div>
+
+</div>
+
+<br>
+
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; text-align: center; font-size: 1.1em; font-weight: bold;">
+実際に手を動かすことで、生成AIの可能性が実感できます！
+</div>
+
+</div>
+
+---
+
+## 目次
+
+1. <font color=#E5E8EA>「生成AI」とは何か？</font>
+   
+2. <font color=#E5E8EA>生成AIに関する基礎知識</font>
+
 3. <font color=#E5E8EA>Google Geminiを使ってみよう</font>
 
 4. 生成AIをより上手に使うために
@@ -966,55 +1425,58 @@ AIに指示を与え、望む結果を引き出すための<br/>「入力」や�
 
 ## 第4章で学ぶこと
 
-生成AIをさらに効果的に使うための応用テクニックと、知っておくべき限界や注意点を学びます。
+生成AIを効果的に使うための実践的なヒントと、知っておくべき注意点を学びます。
 
 ### この章のポイント
 
-1. **高度なプロンプト技術** 〜 出力の質をさらに高める
-2. **信頼性を高める技術** 〜 正確な回答を得るために
-3. **AIの限界を知る** 〜 上手に付き合うために
-4. **責任ある利用** 〜 安全に活用するために
+1. **プロンプトのレベルアップ** 〜 より良い回答を得るために
+2. **AIの限界を知る** 〜 上手に付き合うために
+3. **安全な使い方** 〜 責任ある利用のために
 
-<div style="background: #fff3e0; padding: 15px; border-radius: 8px; border-left: 5px solid #f57c00; margin-top: 25px;">
-⚠️ AIを「道具」として正しく理解し、適切に使いこなすための知識です
+<div style="background: #e8f5e9; padding: 15px; border-radius: 8px; border-left: 5px solid #388e3c; margin-top: 25px;">
+💡 AIを賢く、安全に使いこなすための実践的な知識です
 </div>
 
 ---
 
-## 高度なプロンプト技術①：ゼロショット
+## プロンプトをレベルアップさせる3つのコツ
 
 <div style="font-size: 0.9em;">
 
-プロンプトの与え方には、いくつかのテクニックがあります。
+第3章で基本を学びました。ここでは、さらに回答の質を高めるコツを紹介します。
 
 <br>
 
-<div style="background: #e3f2fd; border-left: 5px solid #1976d2; padding: 20px; border-radius: 8px; margin: 20px 0;">
-<div style="font-size: 1.1em; font-weight: bold; color: #1976d2; margin-bottom: 10px;">📝 ゼロショット プロンプティング</div>
+<div style="display: flex; flex-direction: column; gap: 18px; margin: 25px 0;">
 
-事前情報や例を**一切与えず**、直接タスクを依頼する最もシンプルな方法
+<div style="background: #e3f2fd; border-left: 8px solid #1976d2; padding: 20px; border-radius: 8px;">
+<div style="display: flex; align-items: center; gap: 15px;">
+<div style="font-size: 2.5em;">💡</div>
+<div>
+<div style="font-weight: bold; color: #1976d2; font-size: 1.2em; margin-bottom: 5px;">1. 例を示す</div>
+<div style="font-size: 0.9em;">期待する出力の形式や内容の例を1〜2個示すと、AIが意図を正確に理解します</div>
+</div>
+</div>
 </div>
 
-<br>
-
-### 例
-
-<div style="background: white; border: 2px solid #1976d2; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 0.9em;">
-生成AIのメリットを3つ挙げてください。
+<div style="background: #fff3e0; border-left: 8px solid #f57c00; padding: 20px; border-radius: 8px;">
+<div style="display: flex; align-items: center; gap: 15px;">
+<div style="font-size: 2.5em;">🎭</div>
+<div>
+<div style="font-weight: bold; color: #f57c00; font-size: 1.2em; margin-bottom: 5px;">2. 役割を与える</div>
+<div style="font-size: 0.9em;">「あなたは〇〇の専門家です」と伝えることで、専門的で適切な回答が得られます</div>
+</div>
+</div>
 </div>
 
-<br>
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.85em;">
-
-<div style="background: #e8f5e9; padding: 12px; border-radius: 6px;">
-✅ <strong>メリット</strong><br/>
-シンプルで手軽
+<div style="background: #e8f5e9; border-left: 8px solid #388e3c; padding: 20px; border-radius: 8px;">
+<div style="display: flex; align-items: center; gap: 15px;">
+<div style="font-size: 2.5em;">🔄</div>
+<div>
+<div style="font-weight: bold; color: #388e3c; font-size: 1.2em; margin-bottom: 5px;">3. 対話で磨く</div>
+<div style="font-size: 0.9em;">最初の回答が不十分なら「もっと詳しく」「具体例を追加して」と追加で指示しましょう</div>
 </div>
-
-<div style="background: #ffebee; padding: 12px; border-radius: 6px;">
-❌ <strong>デメリット</strong><br/>
-期待通りの形式にならないことも
+</div>
 </div>
 
 </div>
@@ -1023,304 +1485,135 @@ AIに指示を与え、望む結果を引き出すための<br/>「入力」や�
 
 ---
 
-## 高度なプロンプト技術②：ワンショット
-
-<div style="font-size: 0.9em;">
-
-<div style="background: #fff3e0; border-left: 5px solid #f57c00; padding: 20px; border-radius: 8px; margin: 20px 0;">
-<div style="font-size: 1.1em; font-weight: bold; color: #f57c00; margin-bottom: 10px;">📝 ワンショット プロンプティング</div>
-
-**1つだけ手本**となる例を示し、それを参考にタスクを実行させる方法
-</div>
-
-<br>
-
-### 例
-
-<div style="background: white; border: 2px solid #f57c00; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 0.85em; line-height: 1.6;">
-以下の例を参考に、「ML」について説明してください。<br/>
-<br/>
-<strong>例：</strong><br/>
-Q: AIとは？<br/>
-A: 人工知能（Artificial Intelligence）のことで、人間の知能を模倣したコンピュータシステムです。<br/>
-<br/>
-Q: MLとは？
-</div>
-
-<br>
-
-<div style="background: #e8f5e9; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; color: #388e3c;">
-💡 出力の形式やスタイルを具体的に伝えたい場合に有効！
-</div>
-
-</div>
-
----
-
-## 高度なプロンプト技術③：少数ショット
-
-<div style="font-size: 0.9em;">
-
-<div style="background: #e8f5e9; border-left: 5px solid #388e3c; padding: 20px; border-radius: 8px; margin: 20px 0;">
-<div style="font-size: 1.1em; font-weight: bold; color: #388e3c; margin-bottom: 10px;">📝 少数ショット プロンプティング</div>
-
-**複数の例**を示すことで、より複雑なパターンやニュアンスを学習させる方法
-</div>
-
-<br>
-
-### 例：顧客の感情分析
-
-<div style="background: white; border: 2px solid #388e3c; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 0.85em; line-height: 1.6;">
-以下の例を参考に、顧客の感情を分析してください。<br/>
-<br/>
-「商品が予定より早く届いて嬉しいです」→ ポジティブ<br/>
-「対応が遅くて困りました」→ ネガティブ<br/>
-「普通の商品でした」→ ニュートラル<br/>
-<br/>
-「サポートの方が親切で助かりました」→ ?
-</div>
-
-<br>
-
-<div style="background: #fff3e0; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; color: #f57c00;">
-複数の例で学ばせることで、回答の精度がぐっと高まります！
-</div>
-
-</div>
-
----
-
-## 高度なプロンプト技術④：ロール設定
-
-<div style="font-size: 0.9em;">
-
-<div style="background: #fce4ec; border-left: 5px solid #c2185b; padding: 20px; border-radius: 8px; margin: 20px 0;">
-<div style="font-size: 1.1em; font-weight: bold; color: #c2185b; margin-bottom: 10px;">👤 ロール設定（ペルソナ設定）</div>
-
-AIに特定の**専門家やキャラクターの役割**を与えることで、出力のトーンや視点を制御
-</div>
-
-<br>
-
-### 例の比較
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.85em;">
-
-<div style="background: white; border: 2px solid #999; padding: 12px; border-radius: 8px;">
-<div style="font-weight: bold; margin-bottom: 8px;">通常の質問</div>
-<div style="font-family: monospace;">
-生成AIのリスクを教えて
-</div>
-</div>
-
-<div style="background: white; border: 2px solid #c2185b; padding: 12px; border-radius: 8px;">
-<div style="font-weight: bold; margin-bottom: 8px; color: #c2185b;">ロール設定あり</div>
-<div style="font-family: monospace;">
-あなたは情報セキュリティの専門家です。経営者向けに、生成AIのセキュリティリスクを3つ、対策も含めて説明してください。
-</div>
-</div>
-
-</div>
-
-<br>
-
-<div style="background: #e3f2fd; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; color: #1976d2;">
-専門性の高い、具体的な回答が得られます！
-</div>
-
-</div>
-
----
-
-## より信頼性の高い回答を得る：グラウンディング
-
-<div style="font-size: 0.9em;">
-
-AIの回答は常に正しいとは限りません。信頼性を高めるための技術があります。
-
-<br>
-
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; margin: 20px 0;">
-<div style="font-size: 1.3em; font-weight: bold; margin-bottom: 10px;">⚓ グラウンディング（Grounding）</div>
-AIの出力を、検証可能な特定の情報源に紐付ける（根拠を持たせる）技術
-</div>
-
-<br>
-
-### 効果
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-
-<div style="background: #e8f5e9; border-left: 5px solid #388e3c; padding: 15px; border-radius: 8px;">
-<div style="font-weight: bold; color: #388e3c; margin-bottom: 8px;">✅ 正確性の向上</div>
-事実に基づかない情報の生成を抑制
-</div>
-
-<div style="background: #e3f2fd; border-left: 5px solid #1976d2; padding: 15px; border-radius: 8px;">
-<div style="font-weight: bold; color: #1976d2; margin-bottom: 8px;">✅ 信頼性の担保</div>
-出典を明示できる
-</div>
-
-</div>
-
-</div>
-
----
-
-## RAG：検索拡張生成
+## コツ①：例を示すプロンプト
 
 <div style="font-size: 0.85em;">
 
-グラウンディングを実現する代表的な手法が**RAG**です。
+実際の例を見てみましょう。
 
 <br>
 
-<div style="background: #fff3e0; border-left: 5px solid #f57c00; padding: 20px; border-radius: 8px; margin: 15px 0;">
-<div style="font-size: 1.1em; font-weight: bold; color: #f57c00; margin-bottom: 10px;">🔍 RAG（Retrieval-Augmented Generation）</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
 
-LLMの一般的な知識と、あなたの組織が持つ専門知識を**会話の直前に融合**させる技術
+<div style="background: #ffebee; border: 2px solid #d32f2f; padding: 20px; border-radius: 10px;">
+<div style="font-weight: bold; color: #d32f2f; margin-bottom: 12px; font-size: 1.1em;">❌ 例なし</div>
+<div style="background: white; padding: 12px; border-radius: 5px; font-family: monospace; font-size: 0.9em; margin-bottom: 12px; line-height: 1.5;">
+顧客レビューの感情を分析してください。<br>
+<br>
+「サポートが親切でした」
+</div>
+<div style="font-size: 0.9em;">
+AIは形式がわからず、<br>回答がバラバラに
+</div>
+</div>
+
+<div style="background: #e8f5e9; border: 2px solid #388e3c; padding: 20px; border-radius: 10px;">
+<div style="font-weight: bold; color: #388e3c; margin-bottom: 12px; font-size: 1.1em;">✅ 例あり</div>
+<div style="background: white; padding: 12px; border-radius: 5px; font-family: monospace; font-size: 0.85em; margin-bottom: 12px; line-height: 1.5;">
+以下の例を参考に感情分析してください。<br>
+例）「商品が早く届いた」→ポジティブ<br>
+例）「対応が遅い」→ネガティブ<br>
+<br>
+「サポートが親切でした」
+</div>
+<div style="font-size: 0.9em;">
+形式が統一され、<br>一貫した回答に
+</div>
+</div>
+
 </div>
 
 <br>
 
-### RAGの動作プロセス
-
-<div style="background: white; border: 2px solid #667eea; padding: 20px; border-radius: 10px; margin: 15px 0;">
-
-<div style="margin-bottom: 15px;">
-<span style="background: #e3f2fd; color: #1976d2; padding: 5px 15px; border-radius: 20px; font-weight: bold;">1. 検索</span>
-<div style="margin: 8px 0 0 20px; font-size: 0.95em;">質問に関連する情報を外部データベースから検索</div>
-</div>
-
-<div style="margin-bottom: 15px;">
-<span style="background: #fff3e0; color: #f57c00; padding: 5px 15px; border-radius: 20px; font-weight: bold;">2. 拡張</span>
-<div style="margin: 8px 0 0 20px; font-size: 0.95em;">見つけた情報を元のプロンプトに補足情報として追加</div>
-</div>
-
-<div style="margin-bottom: 15px;">
-<span style="background: #e8f5e9; color: #388e3c; padding: 5px 15px; border-radius: 20px; font-weight: bold;">3. 生成</span>
-<div style="margin: 8px 0 0 20px; font-size: 0.95em;">拡張されたプロンプトに基づいて最終的な回答を生成</div>
-</div>
-
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold;">
+💡 1〜2個の例を示すだけで、回答の質が大きく向上します
 </div>
 
 </div>
 
 ---
 
-## RAGの活用例
+## コツ②：役割を与えるプロンプト
 
-<div style="font-size: 0.9em;">
+<div style="font-size: 0.85em;">
 
-RAGは、特に**社内情報を活用したい場合**に威力を発揮します。
+AIに「専門家」の役割を与えることで、視点や専門性が変わります。
 
 <br>
 
-### 具体例
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
 
-<div style="background: linear-gradient(to right, #e8f5e9, #fff); border: 2px solid #388e3c; padding: 20px; border-radius: 10px; margin: 20px 0;">
+<div style="background: #ffebee; border: 2px solid #d32f2f; padding: 20px; border-radius: 10px;">
+<div style="font-weight: bold; color: #d32f2f; margin-bottom: 12px; font-size: 1.1em;">❌ 役割なし</div>
+<div style="background: white; padding: 12px; border-radius: 5px; font-family: monospace; font-size: 0.9em; margin-bottom: 12px;">
+データセキュリティについて説明して
+</div>
+<div style="font-size: 0.9em;">
+一般的で抽象的な<br>回答になりがち
+</div>
+</div>
 
-<div style="font-weight: bold; color: #388e3c; margin-bottom: 10px;">📚 社内ナレッジベースと連携</div>
-
-**質問**：「過去に同様のトラブルはありましたか？」
-
-**RAGの動作**：
-1. 社内の過去のトラブルシューティング文書から関連情報を検索
-2. 検索した具体的な事例をプロンプトに追加
-3. 実際の事例に基づいた、正確な回答を生成
+<div style="background: #e8f5e9; border: 2px solid #388e3c; padding: 20px; border-radius: 10px;">
+<div style="font-weight: bold; color: #388e3c; margin-bottom: 12px; font-size: 1.1em;">✅ 役割あり</div>
+<div style="background: white; padding: 12px; border-radius: 5px; font-family: monospace; font-size: 0.85em; margin-bottom: 12px; line-height: 1.5;">
+あなたは情報セキュリティの専門家です。中小企業の経営者向けに、データセキュリティの重要性を3つのポイントで説明してください。
+</div>
+<div style="font-size: 0.9em;">
+対象者に合わせた<br>具体的な回答に
+</div>
+</div>
 
 </div>
 
 <br>
 
 <div style="background: #e3f2fd; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; color: #1976d2;">
-💡 「ハルシネーション」（後述）を効果的に防ぐことができます！
+🎯 「専門家」「初心者向けの先生」など、役割を明確にしましょう
 </div>
 
 </div>
 
 ---
 
-## モデルの「個性」を調整：パラメータ
+## コツ③：対話で磨くプロンプト
 
 <div style="font-size: 0.9em;">
 
-AIモデルの出力の傾向は、いくつかの**パラメータ**を調整することで制御できます。
+完璧な回答を一度で得ることは難しいです。対話を重ねて改善しましょう。
 
 <br>
 
-<div style="background: #fce4ec; border-left: 5px solid #c2185b; padding: 20px; border-radius: 8px; margin: 20px 0;">
-<div style="font-size: 1.1em; font-weight: bold; color: #c2185b; margin-bottom: 10px;">⚙️ サンプリング パラメータ</div>
+<div style="background: white; border: 3px solid #667eea; padding: 25px; border-radius: 12px; margin: 20px 0;">
 
-AIの「性格」を調整するツマミのようなもの
-</div>
-
-<br>
-
-### 主なパラメータ
-
-<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-size: 0.85em;">
-
-<div style="background: #e3f2fd; padding: 15px; border-radius: 8px; text-align: center;">
-<div style="font-weight: bold; color: #1976d2; margin-bottom: 8px;">🌡️ 温度<br/>(Temperature)</div>
-創造性の調整
-</div>
-
-<div style="background: #fff3e0; padding: 15px; border-radius: 8px; text-align: center;">
-<div style="font-weight: bold; color: #f57c00; margin-bottom: 8px;">📊 Top-P</div>
-単語の選択範囲
-</div>
-
-<div style="background: #e8f5e9; padding: 15px; border-radius: 8px; text-align: center;">
-<div style="font-weight: bold; color: #388e3c; margin-bottom: 8px;">📏 出力長</div>
-テキストの長さ
-</div>
-
-</div>
-
-</div>
-
----
-
-## 温度（Temperature）：創造性のツマミ
-
-<div style="font-size: 0.85em;">
-
-<div style="background: #fff3e0; border-left: 5px solid #f57c00; padding: 20px; border-radius: 8px; margin: 20px 0;">
-<div style="font-weight: bold; color: #f57c00; margin-bottom: 10px;">🌡️ 温度とは</div>
-
-AIに「どれだけ冒険させるか」を指示するツマミのようなもの
-</div>
-
-<br>
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-
-<div style="background: #e3f2fd; border: 3px solid #1976d2; padding: 20px; border-radius: 10px;">
-<div style="font-size: 1.5em; text-align: center; margin-bottom: 10px;">🧊</div>
-<div style="font-weight: bold; color: #1976d2; text-align: center; margin-bottom: 10px;">低い温度（例：0.2）</div>
-<div style="font-size: 0.95em;">
-• **保守的で予測可能**<br/>
-• 辞書通りの無難な言葉<br/>
-• 事実に基づく要約に最適<br/>
-<br/>
-<strong>用途：</strong>技術文書、要約、翻訳
+<div style="background: #e3f2fd; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+<div style="font-weight: bold; color: #1976d2; margin-bottom: 8px;">📝 最初の質問</div>
+<div style="font-family: monospace; font-size: 0.9em;">
+「チーム会議の効率化方法を教えて」
 </div>
 </div>
 
-<div style="background: #ffebee; border: 3px solid #d32f2f; padding: 20px; border-radius: 10px;">
-<div style="font-size: 1.5em; text-align: center; margin-bottom: 10px;">🔥</div>
-<div style="font-weight: bold; color: #d32f2f; text-align: center; margin-bottom: 10px;">高い温度（例：1.0）</div>
-<div style="font-size: 0.95em;">
-• **創造的で多様**<br/>
-• 意外な言葉の選択<br/>
-• 独創的なアイデアに最適<br/>
-<br/>
-<strong>用途：</strong>創作文章、ブレスト、詩
+<div style="text-align: center; margin: 15px 0; font-size: 1.5em; color: #667eea;">⬇️</div>
+
+<div style="background: #fff3e0; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+<div style="font-weight: bold; color: #f57c00; margin-bottom: 8px;">💬 追加指示①</div>
+<div style="font-family: monospace; font-size: 0.9em;">
+「もっと具体的な方法を教えてください」
 </div>
 </div>
 
+<div style="text-align: center; margin: 15px 0; font-size: 1.5em; color: #667eea;">⬇️</div>
+
+<div style="background: #e8f5e9; padding: 15px; border-radius: 8px;">
+<div style="font-weight: bold; color: #388e3c; margin-bottom: 8px;">✨ 追加指示②</div>
+<div style="font-family: monospace; font-size: 0.9em;">
+「リモートワークでも使える方法に絞ってください」
+</div>
+</div>
+
+</div>
+
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold;">
+対話を重ねることで、求める回答に近づいていきます
 </div>
 
 </div>
@@ -1478,53 +1771,93 @@ AIの出力を鵜呑みにしない
 
 ---
 
+## 安全に使うための心得
+
+<div style="font-size: 0.9em;">
+
+生成AIを業務で使う際に、必ず守るべきルールがあります。
+
+<br>
+
+<div style="display: flex; flex-direction: column; gap: 15px; margin: 20px 0;">
+
+<div style="background: #ffebee; border: 3px solid #d32f2f; padding: 20px; border-radius: 10px;">
+<div style="display: flex; align-items: center; gap: 15px;">
+<div style="font-size: 2em;">🔒</div>
+<div>
+<div style="font-weight: bold; color: #d32f2f; font-size: 1.1em; margin-bottom: 5px;">機密情報は入力しない</div>
+<div style="font-size: 0.9em;">顧客情報、社内機密、個人情報などは絶対にAIに入力しないでください</div>
+</div>
+</div>
+</div>
+
+<div style="background: #fff3e0; border: 3px solid #f57c00; padding: 20px; border-radius: 10px;">
+<div style="display: flex; align-items: center; gap: 15px;">
+<div style="font-size: 2em;">✅</div>
+<div>
+<div style="font-weight: bold; color: #f57c00; font-size: 1.1em; margin-bottom: 5px;">必ず内容を確認する</div>
+<div style="font-size: 0.9em;">AIの出力をそのまま使わず、必ず人間が内容を確認・修正してから使用しましょう</div>
+</div>
+</div>
+</div>
+
+<div style="background: #e3f2fd; border: 3px solid #1976d2; padding: 20px; border-radius: 10px;">
+<div style="display: flex; align-items: center; gap: 15px;">
+<div style="font-size: 2em;">📋</div>
+<div>
+<div style="font-weight: bold; color: #1976d2; font-size: 1.1em; margin-bottom: 5px;">社内ルールを守る</div>
+<div style="font-size: 0.9em;">会社の生成AI利用ガイドラインがあれば、必ず確認して従ってください</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div style="background: linear-gradient(135deg, #d32f2f 0%, #c2185b 100%); color: white; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold;">
+⚠️ 安全に使うことが、長く活用し続けるための大前提です
+</div>
+
+</div>
+
+---
+
 ## 第4章のまとめ
 
 <div style="font-size: 0.9em;">
 
-### 生成AIを使いこなすために
+### 賢く、安全に使いこなすために
 
 <br>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0;">
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin: 20px 0;">
 
-<div style="background: #e3f2fd; border-radius: 10px; padding: 20px; border-top: 5px solid #1976d2;">
-<div style="font-size: 1.8em; margin-bottom: 10px; text-align: center;">📚</div>
-<div style="font-weight: bold; color: #1976d2; margin-bottom: 8px; text-align: center;">高度な技術</div>
+<div style="background: #e3f2fd; border-radius: 10px; padding: 20px; text-align: center; border-top: 5px solid #1976d2;">
+<div style="font-size: 1.8em; margin-bottom: 10px;">📚</div>
+<div style="font-weight: bold; color: #1976d2; margin-bottom: 8px;">レベルアップ</div>
 <div style="font-size: 0.85em;">
-• ショットプロンプティング<br/>
-• ロール設定<br/>
-• RAGで信頼性向上
+• 例を示す<br/>
+• 役割を与える<br/>
+• 対話で磨く
 </div>
 </div>
 
-<div style="background: #fff3e0; border-radius: 10px; padding: 20px; border-top: 5px solid #f57c00;">
-<div style="font-size: 1.8em; margin-bottom: 10px; text-align: center;">⚙️</div>
-<div style="font-weight: bold; color: #f57c00; margin-bottom: 8px; text-align: center;">パラメータ調整</div>
-<div style="font-size: 0.85em;">
-• 温度で創造性を制御<br/>
-• Top-Pで多様性を調整<br/>
-• 用途に応じて最適化
-</div>
-</div>
-
-<div style="background: #ffebee; border-radius: 10px; padding: 20px; border-top: 5px solid #d32f2f;">
-<div style="font-size: 1.8em; margin-bottom: 10px; text-align: center;">⚠️</div>
-<div style="font-weight: bold; color: #d32f2f; margin-bottom: 8px; text-align: center;">限界を知る</div>
+<div style="background: #ffebee; border-radius: 10px; padding: 20px; text-align: center; border-top: 5px solid #d32f2f;">
+<div style="font-size: 1.8em; margin-bottom: 10px;">⚠️</div>
+<div style="font-weight: bold; color: #d32f2f; margin-bottom: 8px;">限界を知る</div>
 <div style="font-size: 0.85em;">
 • ハルシネーション<br/>
-• ナレッジカットオフ<br/>
-• バイアスへの注意
+• 古い情報<br/>
+• バイアス
 </div>
 </div>
 
-<div style="background: #e8f5e9; border-radius: 10px; padding: 20px; border-top: 5px solid #388e3c;">
-<div style="font-size: 1.8em; margin-bottom: 10px; text-align: center;">🤝</div>
-<div style="font-weight: bold; color: #388e3c; margin-bottom: 8px; text-align: center;">責任ある利用</div>
+<div style="background: #e8f5e9; border-radius: 10px; padding: 20px; text-align: center; border-top: 5px solid #388e3c;">
+<div style="font-size: 1.8em; margin-bottom: 10px;">🔒</div>
+<div style="font-weight: bold; color: #388e3c; margin-bottom: 8px;">安全に使う</div>
 <div style="font-size: 0.85em;">
-• 批判的思考<br/>
-• 検証の習慣<br/>
-• 倫理的配慮
+• 機密情報は入力しない<br/>
+• 必ず確認する<br/>
+• ルールを守る
 </div>
 </div>
 
@@ -1533,7 +1866,7 @@ AIの出力を鵜呑みにしない
 <br>
 
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; text-align: center; font-size: 1.1em; font-weight: bold;">
-AIの長所を活かし、限界を理解して、賢く付き合いましょう！
+AIは強力なツール。正しく理解して、安全に活用しましょう！
 </div>
 
 </div>
@@ -1556,45 +1889,55 @@ AIの長所を活かし、限界を理解して、賢く付き合いましょう
 
 ## 今日学んだこと：全体の振り返り
 
-<div style="font-size: 0.9em;">
+<div style="font-size: 0.85em;">
 
 本日は、生成AIの基礎から実践的な活用方法まで学びました。
 
-<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin: 25px 0;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0;">
 
-<div style="background: #e3f2fd; border-radius: 10px; padding: 20px; text-align: center; border-top: 5px solid #1976d2;">
-<div style="font-size: 1.5em; margin-bottom: 10px;">1️⃣</div>
-<div style="font-weight: bold; color: #1976d2; margin-bottom: 8px; font-size: 1.1em;">生成AIとは</div>
-<div style="font-size: 0.85em;">
+<div style="background: #e3f2fd; border-radius: 10px; padding: 20px; border-top: 5px solid #1976d2;">
+<div style="font-size: 1.3em; margin-bottom: 8px; text-align: center;">1️⃣</div>
+<div style="font-weight: bold; color: #1976d2; margin-bottom: 8px; text-align: center;">生成AIとは</div>
+<div style="font-size: 0.9em;">
 • AI技術の階層<br/>
 • 4つの能力<br/>
 • マルチモーダル
 </div>
 </div>
 
-<div style="background: #fff3e0; border-radius: 10px; padding: 20px; text-align: center; border-top: 5px solid #f57c00;">
-<div style="font-size: 1.5em; margin-bottom: 10px;">2️⃣</div>
-<div style="font-weight: bold; color: #f57c00; margin-bottom: 8px; font-size: 1.1em;">基礎知識</div>
-<div style="font-size: 0.85em;">
-• モデル<br/>
-• データ<br/>
-• プロンプト
+<div style="background: #fff3e0; border-radius: 10px; padding: 20px; border-top: 5px solid #f57c00;">
+<div style="font-size: 1.3em; margin-bottom: 8px; text-align: center;">2️⃣</div>
+<div style="font-weight: bold; color: #f57c00; margin-bottom: 8px; text-align: center;">基礎知識</div>
+<div style="font-size: 0.9em;">
+• モデルとLLM<br/>
+• データの重要性<br/>
+• プロンプトの基本
 </div>
 </div>
 
-<div style="background: #e8f5e9; border-radius: 10px; padding: 20px; text-align: center; border-top: 5px solid #388e3c;">
-<div style="font-size: 1.5em; margin-bottom: 10px;">4️⃣</div>
-<div style="font-weight: bold; color: #388e3c; margin-bottom: 8px; font-size: 1.1em;">上手に使う</div>
-<div style="font-size: 0.85em;">
-• 高度な技術<br/>
+<div style="background: #e8f5e9; border-radius: 10px; padding: 20px; border-top: 5px solid #388e3c;">
+<div style="font-size: 1.3em; margin-bottom: 8px; text-align: center;">3️⃣</div>
+<div style="font-weight: bold; color: #388e3c; margin-bottom: 8px; text-align: center;">Geminiで実践</div>
+<div style="font-size: 0.9em;">
+• アクセス方法<br/>
+• 基本的な使い方<br/>
+• 実践的な演習
+</div>
+</div>
+
+<div style="background: #fce4ec; border-radius: 10px; padding: 20px; border-top: 5px solid #c2185b;">
+<div style="font-size: 1.3em; margin-bottom: 8px; text-align: center;">4️⃣</div>
+<div style="font-weight: bold; color: #c2185b; margin-bottom: 8px; text-align: center;">賢く使う</div>
+<div style="font-size: 0.9em;">
+• プロンプトの改善<br/>
 • AIの限界<br/>
-• 責任ある利用
+• 安全な利用
 </div>
 </div>
 
 </div>
 
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; text-align: center; font-size: 1.1em; font-weight: bold; margin-top: 25px;">
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; text-align: center; font-size: 1.1em; font-weight: bold; margin-top: 20px;">
 これであなたも「Generative AI Leader」への第一歩！
 </div>
 
@@ -1691,40 +2034,50 @@ AIの長所を活かし、限界を理解して、賢く付き合いましょう
 
 ---
 
-## 今日から始められること：具体的な第一歩
+## 今日から始められること：3ステップ
 
 <div style="font-size: 0.9em;">
 
-<div style="background: linear-gradient(to right, #667eea, #764ba2); color: white; padding: 25px; border-radius: 12px; margin: 20px 0;">
-<div style="font-size: 1.3em; font-weight: bold; margin-bottom: 15px;">🎯 明日の業務で試してみよう</div>
+研修が終わったら、すぐに始められる3つのステップです。
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.9em; margin-top: 15px;">
+<br>
 
-<div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; backdrop-filter: blur(10px);">
-<div style="font-weight: bold; margin-bottom: 8px;">📧 メール作成</div>
-「取引先への新製品紹介メールを、丁寧なトーンで200文字程度で作成して」
+<div style="display: flex; flex-direction: column; gap: 20px; margin: 25px 0;">
+
+<div style="background: #e3f2fd; border: 3px solid #1976d2; padding: 25px; border-radius: 12px;">
+<div style="display: flex; align-items: center; gap: 20px;">
+<div style="background: #1976d2; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5em; font-weight: bold; flex-shrink: 0;">1</div>
+<div>
+<div style="font-weight: bold; color: #1976d2; font-size: 1.2em; margin-bottom: 5px;">まずはアクセス</div>
+<div style="font-size: 0.95em;">今日のうちに <strong>gemini.google.com</strong> を開いて、簡単な質問を1つしてみましょう</div>
 </div>
-
-<div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; backdrop-filter: blur(10px);">
-<div style="font-weight: bold; margin-bottom: 8px;">📄 議事録要約</div>
-「以下の議事録から、決定事項と次のアクションを3つずつ箇条書きで抽出して」
-</div>
-
-<div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; backdrop-filter: blur(10px);">
-<div style="font-weight: bold; margin-bottom: 8px;">💡 アイデア出し</div>
-「営業部の業務効率化のアイデアを5つ、それぞれ実現の難易度も含めて提案して」
-</div>
-
-<div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; backdrop-filter: blur(10px);">
-<div style="font-weight: bold; margin-bottom: 8px;">📊 データ分析</div>
-「この売上データから、トレンドと改善点を3つずつ分析して」
-</div>
-
 </div>
 </div>
 
-<div style="background: #e8f5e9; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; color: #388e3c; margin-top: 20px;">
-💡 所要時間：各5分程度。まずは1つ試してみましょう！
+<div style="background: #fff3e0; border: 3px solid #f57c00; padding: 25px; border-radius: 12px;">
+<div style="display: flex; align-items: center; gap: 20px;">
+<div style="background: #f57c00; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5em; font-weight: bold; flex-shrink: 0;">2</div>
+<div>
+<div style="font-weight: bold; color: #f57c00; font-size: 1.2em; margin-bottom: 5px;">小さなタスクで試す</div>
+<div style="font-size: 0.95em;">メール下書き、議事録要約など、<strong>失敗しても大丈夫なタスク</strong>から始めましょう</div>
+</div>
+</div>
+</div>
+
+<div style="background: #e8f5e9; border: 3px solid #388e3c; padding: 25px; border-radius: 12px;">
+<div style="display: flex; align-items: center; gap: 20px;">
+<div style="background: #388e3c; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5em; font-weight: bold; flex-shrink: 0;">3</div>
+<div>
+<div style="font-weight: bold; color: #388e3c; font-size: 1.2em; margin-bottom: 5px;">習慣にする</div>
+<div style="font-size: 0.95em;"><strong>週に3回、5分だけ</strong>使ってみる。継続することで、自然に使えるようになります</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; text-align: center; font-size: 1.1em; font-weight: bold;">
+💡 完璧を目指さず、まずは触れてみることが大切です！
 </div>
 
 </div>
