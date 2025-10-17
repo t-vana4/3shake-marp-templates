@@ -465,9 +465,7 @@ _class: title dark
 
 1. **モデル**：生成AIの「頭脳」
 
-2. **データ**：生成AIの「賢さ」の源泉
-
-3. **プロンプト**：生成AIとの「対話方法」
+2. **プロンプト**：生成AIとの「対話方法」
 
 ---
 
@@ -480,157 +478,17 @@ _class: title dark
 多量のデータを学習し、新しいコンテンツを生成する能力を持つもの
 </div>
 
-特に重要な次の2つの概念について、次ページ以降で解説します。
+### 有名なモデル
 
-- **基盤モデル（Foundation Model）**
-
-- **大規模言語モデル（LLM：Large Language Model）**
-
-</div>
-
----
-
-## 基盤モデル（Foundation Model）
-
-<div style="background: #e3f2fd; border-left: 5px solid #1976d2; padding: 20px; border-radius: 8px; margin: 20px 0;">
-<div style="font-size: 1.1em; font-weight: bold; color: #1976d2; margin-bottom: 10px;">📚 基盤モデルとは</div>
-
-- 大量のデータで事前にトレーニングされた、非常に大規模なAIモデル
-- 特定のタスクに特化せず、**幅広い知識と能力を持つ**汎用的な土台
-
-</div>
-
-### 特徴
-
-✅ **広範な知識**：インターネット上の膨大なデータから自律的に学習  
-✅ **汎用性**：様々な用途に応用可能  
-✅ **自己学習**：人間が正解ラベルを付けなくても学習できる
-
----
-
-## 大規模言語モデル（LLM）
-
-<div style="background: #e8f5e9; border-left: 5px solid #29A87F; padding: 20px; border-radius: 8px; margin: 20px 0;">
-<div style="font-size: 1.1em; font-weight: bold; color: #29A87F; margin-bottom: 10px;">💬 LLMとは</div>
-
-- 基盤モデルの一種
-- 特に **人間の言語（テキスト）の理解と生成に特化**したモデル
-
-</div>
-
-### できること
-
-✅ **文章の作成**：レポート、メール、記事など  
-✅ **要約**：長文を短くまとめる  
-✅ **翻訳**：多言語間の翻訳  
-✅ **質問応答**：質問に対して適切な回答を生成
-
----
-
-## 両者の関係性
-
-- **基盤モデル（Foundation Model）**：特定のタスクに特化しない汎用的な土台
-
-- **大規模言語モデル（LLM）**：基盤モデルの中でも言語能力を極めた専門家
-
-<br/>
-
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; margin: 20px 0;">
-💡 Gemini や ChatGPT, Claude などは、基盤モデルでもあり大規模言語モデルでもある。
-</div>
-
----
-
-## モデルの学習
-
-モデルが賢くなるプロセスは **「学習」または「トレーニング」** と呼ばれます。
-
-<br/>
-
-### 主な学習アプローチ
-
-<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 20px; font-size: 0.9em;">
-
-<div style="background: #e3f2fd; padding: 15px; border-radius: 10px; border-top: 5px solid #1976d2;">
-<div style="font-weight: bold; color: #1976d2; margin-bottom: 8px;">📖　教師あり学習</div>
-<div style="font-size: 0.85em;">
-問題と正解のセットで学習<br/>
-<span style="color: #666;">例：画像認識</span>
-</div>
-</div>
-
-<div style="background: #fff3e0; padding: 15px; border-radius: 10px; border-top: 5px solid #DDAC26;">
-<div style="font-weight: bold; color: #DDAC26; margin-bottom: 8px;">🔍　教師なし学習</div>
-<div style="font-size: 0.85em;">
-データから自動的にパターンを発見<br/>
-<span style="color: #666;">基盤モデルで使用</span>
-</div>
-</div>
-
-<div style="background: #e8f5e9; padding: 15px; border-radius: 10px; border-top: 5px solid #29A87F;">
-<div style="font-weight: bold; color: #29A87F; margin-bottom: 8px;">🎮　強化学習</div>
-<div style="font-size: 0.85em;">
-試行錯誤で良い行動を学習<br/>
-<span style="color: #666;">例：ゲームAI</span>
-</div>
-</div>
-
-</div>
+- **Gemini(Google)**：長大な文章の理解力、最新に近い情報を考慮
+- **Claude(Anthropic)**：高いコーディング能力、倫理的配慮や安全性を意識した設計
+- **GPT(OpenAI)**：自然な会話能力、汎用的なタスク実行能力
 
 </div>
 
 ---
 
-## 学習データの重要性
-
-<div style="background: #fff3e0; border: 3px solid #DDAC26; padding: 20px; border-radius: 12px; margin: 20px 0; text-align: center;">
-<div style="font-size: 1.5em; font-weight: bold; color: #DDAC26; margin-bottom: 10px;">
-⚠️ Garbage In, Garbage Out
-</div>
-<div style="font-size: 1.1em;">
-ゴミを入れれば、ゴミしか出てこない
-</div>
-</div>
-
-### 高品質なデータの条件
-
-✅ **正確性**：データに誤りがないこと
-✅ **完全性**：必要な情報が欠けていないこと
-✅ **整合性**：データ間で矛盾がないこと
-✅ **関連性**：課題に対して適切なデータであること
-
----
-
-## 学習データの質が低いとどうなるか
-
-質の低いデータで学習したモデルでは、重大な問題が発生する可能性があります。
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
-
-<div style="background: #ffebee; border-left: 5px solid #d32f2f; font-size: 0.85em; padding: 20px; border-radius: 8px;">
-<div style="font-size: 1.0em; font-weight: bold; color: #d32f2f; margin-bottom: 10px;">❌ 不正確な回答</div>
-誤った情報や事実でない内容を生成してしまう
-</div>
-
-<div style="background: #fff3e0; border-left: 5px solid #DDAC26; font-size: 0.85em; padding: 20px; border-radius: 8px;">
-<div style="font-size: 1.0em; font-weight: bold; color: #DDAC26; margin-bottom: 10px;">⚠️ バイアスの増幅</div>
-社会的な偏見や差別的な内容を増幅してしまう
-</div>
-
-</div>
-
-<br/>
-<br/>
-
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; margin: 20px 0;">
-💡 高品質なデータこそが、高性能で公正なAIモデルを生み出す最も重要な資源！
-</div>
-
-</div>
-
----
-
-## AIとの対話方法
+## 生成AIとの対話方法
 
 生成AIとやり取りするための方法が **「プロンプト」** です。
 
@@ -745,7 +603,7 @@ AI活用について書いて
 </div>
 
 <div style="background: #e8f5e9; border-left: 5px solid #29A87F; font-size: 0.85em; padding: 20px; border-radius: 8px;">
-<div style="font-weight: bold; color: #29A87F; font-size: 1.1em; margin-bottom: 10px;">✨ 期待値を明示する</div>
+<div style="font-weight: bold; color: #29A87F; font-size: 1.1em; margin-bottom: 10px;">✨ 期待成果を明示する</div>
 何を、どのように、どう出力してほしいかなど、期待する回答内容を明確に指示する
 </div>
 
@@ -759,9 +617,7 @@ AI活用について書いて
 
 ## 第 2 章のまとめ
 
-✅ **モデル**：基盤モデルと大規模言語モデルは生成AIの「頭脳」
-
-✅ **データ**：データの質が生成AIの回答精度を決める
+✅ **モデル**：能力の中核をなす生成AIの「頭脳」
 
 ✅ **プロンプト**：生成AIの能力をフル活用できるかどうかはプロンプト次第
 
@@ -769,7 +625,7 @@ AI活用について書いて
 <br/>
 
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; text-align: center; font-size: 1.1em; font-weight: bold;">
-💡 この3つが理解できれば生成AIは怖くない！
+💡 この2つが理解できれば生成AIは怖くない！
 </div>
 
 ---
@@ -1227,7 +1083,7 @@ AIモデルは特定時点までのデータを使って学習されており、
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0;">
 
 <div style="background: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #1976d2;">
-<div style="font-weight: bold; color: #1976d2; margin-bottom: 10px;">1️⃣ 第 1 章</div>
+<div style="font-weight: bold; color: #1976d2; margin-bottom: 10px;">第 1 章</div>
 <div style="font-size: 0.7em;">
 ・「AI」の全体像：生成AIはAIの応用分野<br/>
 ・生成AIの4つの能力：作成、要約、自動化、発見<br/>
@@ -1236,16 +1092,16 @@ AIモデルは特定時点までのデータを使って学習されており、
 </div>
 
 <div style="background: #fff3e0; padding: 20px; border-radius: 10px; border-left: 5px solid #DDAC26;">
-<div style="font-weight: bold; color: #DDAC26; margin-bottom: 10px;">2️⃣ 第 2 章</div>
+<div style="font-weight: bold; color: #DDAC26; margin-bottom: 10px;">第 2 章</div>
 <div style="font-size: 0.7em;">
-・モデル：基盤モデル（土台）と大規模言語モデル（言語特化）<br/>
-・データ：データの質が生成AIの回答精度を決める<br/>
-・プロンプト：生成AIとやり取りするための方法
+・モデル：生成AIの頭脳<br/>
+・プロンプト：生成AIとやり取りするための方法<br/>
+・プロンプト作成のコツ：構造化、具体化、役割設定、期待の明示
 </div>
 </div>
 
 <div style="background: #fce4ec; padding: 20px; border-radius: 10px; border-left: 5px solid #c2185b;">
-<div style="font-weight: bold; color: #c2185b; margin-bottom: 10px;">3️⃣ 第 3 章</div>
+<div style="font-weight: bold; color: #c2185b; margin-bottom: 10px;">第 3 章</div>
 <div style="font-size: 0.7em;">
 ・プロンプトエンジニアリングの例<br/>
 ・モデル変更の例<br/>
@@ -1254,9 +1110,9 @@ AIモデルは特定時点までのデータを使って学習されており、
 </div>
 
 <div style="background: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #29A87F;">
-<div style="font-weight: bold; color: #29A87F; margin-bottom: 10px;">4️⃣ 第 4 章</div>
+<div style="font-weight: bold; color: #29A87F; margin-bottom: 10px;">第 4 章</div>
 <div style="font-size: 0.7em;">
-・プロンプトエンジニアリングのコツ：例、専門性、対話<br/>
+・プロンプト改善のコツ：例、専門性、対話<br/>
 ・生成AIの限界：ハルシネーション、ナレッジカットオフ<br/>
 ・安全に使うための心得：機密保持、生成物確認、ルール遵守
 </div>
