@@ -126,7 +126,7 @@ _class: title dark
 
 <div class="title" style="text-align: left; margin-top: 100px; margin-left: 20px; padding-left: 0; max-width: 70%;">
 
-# <span style="font-size: 0.7em;">今日からはじめる生成AI</span>
+# <span style="font-size: 1.0em;">そろそろ生成AI</span>
 
 </div>
 
@@ -1121,20 +1121,21 @@ AIモデルは特定時点までのデータを使って学習されており、
 </div>
 
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; text-align: center; font-size: 1.1em; font-weight: bold;">
-💡 兎にも角にも「まずは使ってみる」から始めましょう！
+💡 「まずは使ってみる」から始めましょう！
 </div>
 
 ---
 
-<!-- _backgroundColor: #0a1929 -->
-<!-- _color: white -->
+<!-- 
+_backgroundColor: #0a1929
+_color: white
+_class: title dark
+-->
 
 ![bg](../../assets/images/3shake-background-full.png)
 
-<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 80%;">
+<div class="title" style="text-align: left; margin-top: 100px; margin-left: 20px; padding-left: 0; max-width: 70%;">
 
-<div style="font-size: 3em; font-weight: bold; margin-bottom: 30px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
-ありがとうございました！
-</div>
+# <span style="font-size: 0.9em;">ありがとうございました！</span>
 
 </div>
