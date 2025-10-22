@@ -191,9 +191,9 @@ _class: title dark
 
 3. Geakeを使ってみよう
 
-4. 生成AIを上手く使うコツ
+4. 生成AIを上手に使うコツ
 
-5. まとめ
+5. おわりに
 
 ---
 
@@ -205,9 +205,9 @@ _class: title dark
 
 3. <font color=#E5E8EA>Geakeを使ってみよう</font>
 
-4. <font color=#E5E8EA>生成AIを上手く使うコツ</font>
+4. <font color=#E5E8EA>生成AIを上手に使うコツ</font>
 
-5. <font color=#E5E8EA>まとめ</font>
+5. <font color=#E5E8EA>おわりに</font>
 
 ---
 
@@ -264,9 +264,9 @@ _class: title dark
 
 ---
 
-## 生成AIの4つの能力
+## 生成AIの 4 つの能力
 
-生成AIには、主に **4つの能力** があります。
+生成AIには、主に **4 つの能力** があります。
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; font-size: 0.9em;">
 
@@ -453,9 +453,9 @@ _class: title dark
 
 3. <font color=#E5E8EA>Geakeを使ってみよう</font>
 
-4. <font color=#E5E8EA>生成AIを上手く使うコツ</font>
+4. <font color=#E5E8EA>生成AIを上手に使うコツ</font>
 
-5. <font color=#E5E8EA>まとめ</font>
+5. <font color=#E5E8EA>おわりに</font>
 
 ---
 
@@ -625,7 +625,7 @@ AI活用について書いて
 <br/>
 
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; text-align: center; font-size: 1.1em; font-weight: bold;">
-💡 この2つが理解できれば生成AIは怖くない！
+💡 この 2 つが理解できれば生成AIは怖くない！
 </div>
 
 ---
@@ -638,9 +638,9 @@ AI活用について書いて
 
 3. Geakeを使ってみよう
 
-4. <font color=#E5E8EA>生成AIを上手く使うコツ</font>
+4. <font color=#E5E8EA>生成AIを上手に使うコツ</font>
 
-5. <font color=#E5E8EA>まとめ</font>
+5. <font color=#E5E8EA>おわりに</font>
 
 ---
 
@@ -761,9 +761,9 @@ Geakeの回答が期待通りにならない時は、以下を試してみまし
 
 3. <font color=#E5E8EA>Geakeを使ってみよう</font>
 
-4. 生成AIを上手く使うコツ
+4. 生成AIを上手に使うコツ
 
-5. <font color=#E5E8EA>まとめ</font>
+5. <font color=#E5E8EA>おわりに</font>
 
 ---
 
@@ -1070,9 +1070,9 @@ AIモデルは特定時点までのデータを使って学習されており、
 
 3. <font color=#E5E8EA>Geakeを使ってみよう</font>
 
-4. <font color=#E5E8EA>生成AIを上手く使うコツ</font>
+4. <font color=#E5E8EA>生成AIを上手に使うコツ</font>
 
-5. まとめ
+5. おわりに
 
 ---
 
@@ -1122,6 +1122,21 @@ AIモデルは特定時点までのデータを使って学習されており、
 
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; text-align: center; font-size: 1.1em; font-weight: bold;">
 💡 「まずは使ってみる」から始めましょう！
+</div>
+
+---
+
+## アンケートご協力のお願い
+
+今後の勉強会や生成AI利活用推進活動をより良いものにしていくために、
+アンケートへのご協力をお願いします！
+
+<div style="text-align: center;">
+
+<img src="../../assets/images/survey_qr_20251020.png" alt="Survey QR" width="25%" style="display: block; margin: 0 auto;">
+
+https://forms.gle/JFXMswMeBMvGenjH6
+
 </div>
 
 ---
